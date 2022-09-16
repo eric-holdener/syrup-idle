@@ -15,7 +15,8 @@ const characterSlice = createSlice({
     str: 5,
     dex: 5,
     int: 5,
-    luk: 5
+    luk: 5,
+    xpTNL: 1144
   },
   reducers: {
     clear: (state) => {
@@ -28,6 +29,27 @@ const characterSlice = createSlice({
     healCharacter: (state, { payload }) => {
       const healed = payload;
       state.hp += healed;
+    },
+    increaseStat: (state, { payload }) => {
+      switch(payload) {
+        case 1:
+          state.str += 1;
+        case 2:
+          state.dex += 1;
+        case 3:
+          state.int += 1;
+        case 4:
+          state.luk += 1;
+      };
+      state.availableAp -= 1;
+    },
+    addExp: (state, { payload }) => {
+      state.exp += payload;
+      if (state.exp >= state.xpTNL) {
+        state.exp = state.exp - state.xpTNL;
+        state.xpTNL = state.xpTNL * 1.2;
+        state.level += 1;
+      }
     }
   }
 })
