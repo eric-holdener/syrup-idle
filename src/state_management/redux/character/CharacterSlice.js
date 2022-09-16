@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit"
 const characterSlice = createSlice({
   name: "character",
   initialState: {
-    name: "Noob",
     currentHp: 10,
     name: "Teidan",
     job: "Warrior",
