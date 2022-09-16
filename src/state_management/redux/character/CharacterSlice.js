@@ -31,15 +31,20 @@ const characterSlice = createSlice({
       state.hp += healed;
     },
     increaseStat: (state, { payload }) => {
+      console.log(payload);
       switch(payload) {
         case 1:
           state.str += 1;
+          break;
         case 2:
           state.dex += 1;
+          break;
         case 3:
           state.int += 1;
+          break;
         case 4:
           state.luk += 1;
+          break;
       };
       state.availableAp -= 1;
     },
@@ -54,7 +59,7 @@ const characterSlice = createSlice({
   }
 })
 
-export const { takeDamage, healCharacter } = characterSlice.actions;
+export const { takeDamage, healCharacter, addExp, increaseStat } = characterSlice.actions;
 const characterReducer = characterSlice.reducer;
 
 export default characterReducer;

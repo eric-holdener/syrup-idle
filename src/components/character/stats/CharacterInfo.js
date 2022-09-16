@@ -5,7 +5,7 @@ export default function CharacterInfo() {
   const dispatch = useDispatch();
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full bg-slate-200 border-2 divide-y divide-black border-black rounded">
       <div className="flex w-full">
         <h5 className="w-1/4 bg-red-500">Name</h5>
         <p className="w-3/4">{character.name}</p>
