@@ -4,7 +4,19 @@ const characterSlice = createSlice({
   name: "character",
   initialState: {
     name: "Noob",
-    hp: 10
+    currentHp: 10,
+    name: "Teidan",
+    job: "Warrior",
+    level: 10,
+    maxHp: 10,
+    maxMp: 10,
+    currentMp: 10,
+    exp: 0,
+    availableAp: 5,
+    str: 5,
+    dex: 5,
+    int: 5,
+    luk: 5
   },
   reducers: {
     clear: (state) => {
