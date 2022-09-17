@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { mark_of_the_beta } from "../../../helpers/EquipmentList";
 
 const characterSlice = createSlice({
   name: "character",
@@ -16,7 +17,28 @@ const characterSlice = createSlice({
     dex: 5,
     int: 5,
     luk: 5,
-    xpTNL: 1144
+    xpTNL: 1144,
+    inventory: {},
+    equipment: {
+      cap: mark_of_the_beta,
+      medal: null,
+      forehead: null,
+      ring_1: null,
+      ring_2: null,
+      ring_3: null,
+      ring_4: null,
+      eye_acc: null,
+      ear_acc: null,
+      mantle: null,
+      chest: null,
+      pendant: null,
+      shoulder: null,
+      shield: null,
+      gloves: null,
+      pants: null,
+      belt: null,
+      shoes: null
+    }
   },
   reducers: {
     clear: (state) => {
