@@ -12,6 +12,5 @@ export default function Sidebar() {
       <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
       <SidebarItem name="Potions" image={RedPotionSprite} link="/brewing" skill={true} character={false}/>
     </>
-
   )
 }

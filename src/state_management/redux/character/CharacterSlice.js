@@ -38,7 +38,10 @@ const characterSlice = createSlice({
       pants: null,
       belt: null,
       shoes: null
-    }
+    },
+    equip_inventory: [],
+    use_inventory: [],
+    etc_inventory: []
   },
   reducers: {
     clear: (state) => {
