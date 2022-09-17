@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { mark_of_the_beta } from "../../../helpers/EquipmentList";
 
 const characterSlice = createSlice({
   name: "character",
@@ -20,7 +19,7 @@ const characterSlice = createSlice({
     xpTNL: 1144,
     inventory: {},
     equipment: {
-      cap: mark_of_the_beta,
+      cap: null,
       medal: null,
       forehead: null,
       ring_1: null,
@@ -80,11 +79,14 @@ const characterSlice = createSlice({
         state.xpTNL = state.xpTNL * 1.2;
         state.level += 1;
       }
+    },
+    addEquip: (state, { payload }) => {
+      state.equip_inventory.push(payload);
     }
   }
 })
 
-export const { takeDamage, healCharacter, addExp, increaseStat } = characterSlice.actions;
+export const { takeDamage, healCharacter, addExp, increaseStat, addEquip } = characterSlice.actions;
 const characterReducer = characterSlice.reducer;
 
 export default characterReducer;
