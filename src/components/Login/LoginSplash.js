@@ -1,7 +1,13 @@
+import CharacterBox from "./CharacterBox";
+
 export default function LoginSplash() {
   return (
-    <>
-      <p>Login splash</p>
-    </>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      <CharacterBox />
+      <CharacterBox />
+      <CharacterBox />
+      <CharacterBox />
+      <CharacterBox />
+    </div>
   )
 }
