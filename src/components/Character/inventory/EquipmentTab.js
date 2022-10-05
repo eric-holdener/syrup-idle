@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { createMarkOfBeta } from "../../../helpers/EquipmentList";
-import { addEquip } from "../../../state_management/redux/character/CharacterSlice";
+import { addEquip } from "../../../state_management/Redux/Character/CharacterSlice";
 
 export default function EquipmentTab() {
   const character = useSelector((state) => state.character);

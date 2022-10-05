@@ -1,15 +1,15 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/layout/Layout';
-import Character from './components/character/Character';
+import Layout from './components/Layout/Layout';
+import Character from './components/Character/Character';
 import { Provider } from 'react-redux';
-import Store from './state_management/redux/store';
-import CombatMain from './components/combat/CombatMain';
-import BrewingMain from './components/brewing/BrewingMain';
-import Inventory from './components/character/Inventory';
-import EquipmentTab from './components/character/inventory/EquipmentTab';
-import UseTab from './components/character/inventory/UseTab';
-import EtcTab from './components/character/inventory/EtcTab';
+import Store from './state_management/Redux/store';
+import CombatMain from './components/Combat/CombatMain';
+import BrewingMain from './components/Brewing/BrewingMain';
+import Inventory from './components/Character/Inventory';
+import EquipmentTab from './components/Character/inventory/EquipmentTab';
+import UseTab from './components/Character/inventory/UseTab';
+import EtcTab from './components/Character/inventory/EtcTab';
 
 function App() {
   return (
