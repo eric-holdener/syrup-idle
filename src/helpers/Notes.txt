@@ -1,0 +1,6 @@
+Sources for reseach:
+  - MapleRoyals
+  - https://bbb.hidden-street.net/
+
+Future To Dos:
+  - Adjust starting character stats
