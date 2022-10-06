@@ -1,8 +1,8 @@
 export default function defaultCharacter() {
   const default_char = {
     currentHp: 10,
-    name: "Teidan",
-    job: "Warrior",
+    name: null,
+    job: "Beginner",
     level: 1,
     maxHp: 50,
     maxMp: 10,
@@ -39,5 +39,5 @@ export default function defaultCharacter() {
     use_inventory: {},
     etc_inventory: {}
   }
-  return 
+  return default_char
 }

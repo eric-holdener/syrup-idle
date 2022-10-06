@@ -5,28 +5,28 @@ export default function LoginSplash() {
 
   const [characters, setCharacters] = useState(() => {
     const saved = localStorage.getItem("savegames");
-    let savegames = null
+    let savegames = {}
     if (saved) {
       const initialValue = JSON.parse(saved);
     } else {
       savegames = {
-        1: {},
-        2: {},
-        3: {},
-        4: {},
-        5: {}
+        1: null,
+        2: null,
+        3: null,
+        4: null,
+        5: null
       }
     }
     return savegames;
-    console.log(saved)
-  })
+  });
+
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
-      <CharacterBox />
-      <CharacterBox />
-      <CharacterBox />
-      <CharacterBox />
-      <CharacterBox />
+      <CharacterBox char={characters[1]}/>
+      <CharacterBox char={characters[2]}/>
+      <CharacterBox char={characters[3]}/>
+      <CharacterBox char={characters[4]}/>
+      <CharacterBox char={characters[5]}/>
     </div>
   )
 }
