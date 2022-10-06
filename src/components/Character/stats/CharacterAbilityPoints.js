@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { increaseStat } from "../../../state_management/redux/character/CharacterSlice";
+import { increaseStat } from "../../../state_management/Redux/Character/CharacterSlice";
 
 export default function CharacterAbilityPoints() {
   const character = useSelector((state) => state.character);
