@@ -37,11 +37,11 @@ export default function LoginSplash() {
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
-      <CharacterBox char={characters[1]}/>
-      <CharacterBox char={characters[2]}/>
-      <CharacterBox char={characters[3]}/>
-      <CharacterBox char={characters[4]}/>
-      <CharacterBox char={characters[5]}/>
+      <CharacterBox char={characters[1]} id="1"/>
+      <CharacterBox char={characters[2]} id="2"/>
+      <CharacterBox char={characters[3]} id="3"/>
+      <CharacterBox char={characters[4]} id="4"/>
+      <CharacterBox char={characters[5]} id="5"/>
     </div>
   )
 }

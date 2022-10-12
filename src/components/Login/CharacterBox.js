@@ -25,7 +25,7 @@ export default function CharacterBox(props) {
           <p>No Character</p>
         </div>
       )}
-      <CharacterCreationModal closeModal={closeModal} show={showModal}>
+      <CharacterCreationModal closeModal={closeModal} show={showModal} sampletext={props.id}>
           Message in Modal
       </CharacterCreationModal>
     </>
