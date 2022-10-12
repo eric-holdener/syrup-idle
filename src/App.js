@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import Layout from './components/Layout/Layout'
 import Character from './components/Character/Character';
 import { Provider } from 'react-redux';
-import Store from './state_management/Redux/store';
+import Store from './state_management/redux/store';
 import CombatMain from './components/Combat/CombatMain';
 import BrewingMain from './components/Brewing/BrewingMain';
 import Inventory from './components/Character/Inventory';
