@@ -35,7 +35,7 @@ export default function CharacterCreationModal(props) {
                 <div className="relative p-6 flex-auto text-slate-500 text-lg">
                   <div className="flex gap-2">
                     <p>Character Name:</p>
-                    <input type="text" name="nameId" value={name} onChange={(e) => setName(e.target.value)} className="grow border-solid border-black text-black"/>
+                    <input type="text" name="nameId" value={name} onChange={(e) => setName(e.target.value)} className="grow border-solid border-slate-500 text-black border-b-2 pl-2 hover:border-2"/>
                   </div>
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
                     I always felt like I could do anything. That’s the main
