@@ -1,10 +1,15 @@
 import { useState } from "react";
 import defaultCharacter from "../../helpers/DefaultCharacter";
+import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function CharacterCreationModal(props) {
 
   const [name, setName] = useState("");
   const [archetype, setArchetype] = useState(null);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   function onClassChange(e) {
     // 1 = explorer
@@ -14,7 +19,9 @@ export default function CharacterCreationModal(props) {
 
   function createCharacter() {
     let character = defaultCharacter(name, archetype)
-    console.log(character);
+    dispatch(setCharacter(character));
+    props.closeModal(false);
+    navigate("/");
   }
 
   function renderModal() {

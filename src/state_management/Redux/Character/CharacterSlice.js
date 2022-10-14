@@ -45,7 +45,7 @@ const characterSlice = createSlice({
       state.equip_inventory.push(payload);
     },
     setCharacter: (state, { payload}) => {
-      state = payload;
+      return payload;
     }
   }
 })

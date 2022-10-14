@@ -7,7 +7,7 @@ export default function defaultCharacter(name, job) {
   }
 
   const default_char = {
-    currentHp: 10,
+    currentHp: 50,
     name: name,
     archetype: job,
     job: char_job,
