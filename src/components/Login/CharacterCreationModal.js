@@ -5,6 +5,12 @@ export default function CharacterCreationModal(props) {
   const [name, setName] = useState();
   const [archetype, setArchetype] = useState();
 
+  function onClassChange(e) {
+    // 1 = explorer
+    // 2 = cygnus knight
+    setArchetype(e.target.value);
+  }
+
   function renderModal() {
     if(!props.show){
         return null;
@@ -37,14 +43,19 @@ export default function CharacterCreationModal(props) {
                     <p>Character Name:</p>
                     <input type="text" name="nameId" value={name} onChange={(e) => setName(e.target.value)} className="grow border-solid border-slate-500 text-black border-b-2 pl-2 hover:border-2"/>
                   </div>
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
-                    {props.sampletext}
-                  </p>
+                  <div className="flex gap-2">
+                    <p>Archetype:</p>
+                    <div onChange={(e) => onClassChange(e)} className="flex flex-col">
+                      <div className="flex">
+                        <input type="radio" value={1} name="class" />
+                        <p>Explorer</p>
+                      </div>
+                      <div className="flex">
+                        <input type="radio" value={2} name="class" disabled={true}/>
+                        <p>Cygnus Knight</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
