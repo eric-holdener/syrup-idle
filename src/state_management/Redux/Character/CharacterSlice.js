@@ -50,7 +50,7 @@ const characterSlice = createSlice({
   }
 })
 
-export const { takeDamage, healCharacter, addExp, increaseStat, addEquip, setCharacter } = characterSlice.actions;
+export const { takeDamage, healCharacter, addExp, increaseStat, addEquip, setCharacter, clear } = characterSlice.actions;
 const characterReducer = characterSlice.reducer;
 
 export default characterReducer;
