@@ -1,8 +1,16 @@
-export default function defaultCharacter() {
+export default function defaultCharacter(name, job) {
+  let char_job = ""
+  if (job == 1) {
+    char_job = "Beginner"
+  } else if (job == 2) {
+    char_job = "Noblesse"
+  }
+
   const default_char = {
     currentHp: 10,
-    name: null,
-    job: "Beginner",
+    name: name,
+    archetype: job,
+    job: char_job,
     level: 1,
     maxHp: 50,
     maxMp: 10,

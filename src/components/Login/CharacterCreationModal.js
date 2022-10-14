@@ -1,14 +1,20 @@
 import { useState } from "react";
+import defaultCharacter from "../../helpers/DefaultCharacter";
 
 export default function CharacterCreationModal(props) {
 
-  const [name, setName] = useState();
-  const [archetype, setArchetype] = useState();
+  const [name, setName] = useState("");
+  const [archetype, setArchetype] = useState(null);
 
   function onClassChange(e) {
     // 1 = explorer
     // 2 = cygnus knight
     setArchetype(e.target.value);
+  }
+
+  function createCharacter() {
+    let character = defaultCharacter(name, archetype)
+    console.log(character);
   }
 
   function renderModal() {
@@ -69,7 +75,7 @@ export default function CharacterCreationModal(props) {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => props.closeModal(false)}
+                    onClick={() => createCharacter()}
                   >
                     Save Changes
                   </button>
