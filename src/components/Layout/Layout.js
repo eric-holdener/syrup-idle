@@ -13,7 +13,11 @@ export default function Layout () {
         {character ? (<Sidebar />) : (<InfoSplash />)}
       </div>
       <div className="main-content w-5/6 h-full fixed inset-y-0 right-0 bg-orange-300">
-        <Header />
+        {character ? (
+          <Header />
+        ) : (
+          <></>
+        )}
         <Outlet />
       </div>
     </div>
