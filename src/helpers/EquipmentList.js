@@ -1,4 +1,4 @@
-import MarkOfTheBeta from "../images/sprites/Equipment/mark_of_the_beta.png"
+import MarkOfTheBeta from "../images/sprites/equipment/mark_of_the_beta.png"
 import { Equipment } from "./ItemDefaults"
 
 function createMarkOfBeta() {

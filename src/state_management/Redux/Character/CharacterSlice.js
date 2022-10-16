@@ -43,11 +43,14 @@ const characterSlice = createSlice({
     },
     addEquip: (state, { payload }) => {
       state.equip_inventory.push(payload);
+    },
+    setCharacter: (state, { payload}) => {
+      return payload;
     }
   }
 })
 
-export const { takeDamage, healCharacter, addExp, increaseStat, addEquip } = characterSlice.actions;
+export const { takeDamage, healCharacter, addExp, increaseStat, addEquip, setCharacter, clear } = characterSlice.actions;
 const characterReducer = characterSlice.reducer;
 
 export default characterReducer;
