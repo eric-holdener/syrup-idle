@@ -1,35 +1,6 @@
-import { useState } from "react";
-import defaultCharacter from "../../helpers/DefaultCharacter";
-import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+export default function LoadCharacterNodal(props) {
+  function loadCharacter() {
 
-export default function CharacterCreationModal(props) {
-
-  const [name, setName] = useState("");
-  const [archetype, setArchetype] = useState(null);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  function onClassChange(e) {
-    // 1 = explorer
-    // 2 = cygnus knight
-    setArchetype(e.target.value);
-  }
-
-  function createCharacter() {
-    let character = defaultCharacter(name, archetype)
-    dispatch(setCharacter(character));
-    let saves = localStorage.getItem("savegames");
-    if (saves) {
-      let parsed = JSON.parse(saves);
-      parsed.append(character);
-      localStorage("savegames", JSON.stringify(parsed));
-    } else {
-      localStorage.setItem("savegames", JSON.stringify([character]))
-    }
-    props.closeModal(false);
-    navigate("/");
   }
 
   function renderModal() {
@@ -47,11 +18,11 @@ export default function CharacterCreationModal(props) {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
-                    New Character
+                    Load Character
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => props.setModal(false)}
+                    onClick={() => props.closeModal(false)}
                   >
                     <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
                       ×
@@ -61,21 +32,10 @@ export default function CharacterCreationModal(props) {
                 {/*body*/}
                 <div className="relative p-6 flex-auto text-slate-500 text-lg">
                   <div className="flex gap-2">
-                    <p>Character Name:</p>
-                    <input type="text" name="nameId" value={name} onChange={(e) => setName(e.target.value)} className="grow border-solid border-slate-500 text-black border-b-2 pl-2 hover:border-2"/>
+                    <p>{props.char.name}</p>
                   </div>
                   <div className="flex gap-2">
-                    <p>Archetype:</p>
-                    <div onChange={(e) => onClassChange(e)} className="flex flex-col">
-                      <div className="flex">
-                        <input type="radio" value={1} name="class" />
-                        <p>Explorer</p>
-                      </div>
-                      <div className="flex">
-                        <input type="radio" value={2} name="class" disabled={true}/>
-                        <p>Cygnus Knight</p>
-                      </div>
-                    </div>
+                    <p>{props.char.class}</p>
                   </div>
                 </div>
                 {/*footer*/}
@@ -83,14 +43,14 @@ export default function CharacterCreationModal(props) {
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => props.setModal(false)}
+                    onClick={() => props.closeModal(false)}
                   >
                     Close
                   </button>
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => createCharacter()}
+                    onClick={() => loadCharacter()}
                   >
                     Save Changes
                   </button>
@@ -109,7 +69,3 @@ export default function CharacterCreationModal(props) {
     </>
   )
 }
-
-{/* <button onClick={() => props.closeModal()}>
-Close
-</button> */}

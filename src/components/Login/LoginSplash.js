@@ -8,9 +8,8 @@ export default function LoginSplash() {
     let savegames = []
     if (saved) {
       const initialValue = JSON.parse(saved);
-      let save = 0
-      for (save; save < initialValue.length; save++) {
-        savegames.append([saved[save], save]);
+      for (const [key, value] of Object.entries(initialValue)) {
+        savegames.push([value, key]);
       }
     };
 
