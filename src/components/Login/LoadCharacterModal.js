@@ -1,6 +1,16 @@
-export default function LoadCharacterNodal(props) {
-  function loadCharacter() {
+import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
+export default function LoadCharacterNodal(props) {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function loadCharacter() {
+    console.log(props.char);
+    dispatch(setCharacter(props.char));
+    props.closeModal(false);
+    navigate("/");
   }
 
   function renderModal() {
@@ -52,7 +62,7 @@ export default function LoadCharacterNodal(props) {
                     type="button"
                     onClick={() => loadCharacter()}
                   >
-                    Save Changes
+                    Confirm
                   </button>
                 </div>
               </div>

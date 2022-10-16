@@ -18,7 +18,7 @@ export default function LoginSplash() {
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
-      {characters.map((character) => <CharacterBox char={character[0]} id={character[1]}/>)}
+      {characters.map((character) => <CharacterBox char={character[0]} id={character[1]} key={character[1]}/>)}
       <CharacterBox char={null} id={characters.length}/>
     </div>
   )

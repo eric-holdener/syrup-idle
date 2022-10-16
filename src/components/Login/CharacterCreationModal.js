@@ -23,12 +23,12 @@ export default function CharacterCreationModal(props) {
     let saves = localStorage.getItem("savegames");
     if (saves) {
       let parsed = JSON.parse(saves);
-      parsed.append(character);
-      localStorage("savegames", JSON.stringify(parsed));
+      parsed[parsed.length] = character;
+      localStorage.setItem("savegames", JSON.stringify(parsed));
     } else {
       localStorage.setItem("savegames", JSON.stringify([character]))
     }
-    props.closeModal(false);
+    props.setModal(false);
     navigate("/");
   }
 
