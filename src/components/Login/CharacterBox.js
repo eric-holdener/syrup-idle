@@ -7,7 +7,15 @@ export default function CharacterBox(props) {
   const [showCharModal, setShowCharModal] = useState(false);
 
   function deleteCharacter() {
-    console.log("delete");
+    let saves = localStorage.getItem("savegames");
+    let json = JSON.parse(saves);
+    for (let i = 0; i < json.length; i++) {
+      console.log(json[i]);
+      json.splice(props.id, 1);
+    };
+    console.log(json);
+    localStorage.setItem("savegames", JSON.stringify(json));
+    window.location.reload(true);
   }
 
   return (

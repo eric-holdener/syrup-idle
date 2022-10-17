@@ -12,8 +12,8 @@ export default function CharacterCreationModal(props) {
   const navigate = useNavigate();
 
   function onClassChange(e) {
-    // 1 = explorer
-    // 2 = cygnus knight
+    // 1 = adventurer
+    // 2 = kingdom knight
     setArchetype(e.target.value);
   }
 
