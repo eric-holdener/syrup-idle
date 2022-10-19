@@ -1,14 +1,27 @@
 export default function StatRoller() {
-  let max = 25;
-  let str = randombetween(4, max-3);
-  let luk = randombetween(4, max-2-str);
-  let dex = randombetween(4, max-1-str-luk);
-  let int = max - str - luk - dex;
-  
-  
-  function randombetween(min, max) {
-    return Math.floor(Math.random()*(max-min+1)+min);
+  function generate(from, to, size, sum) {
+    function iter(right, delta) {
+        if (delta < 0) return;
+        if (!delta && right.length === size) return result.push(right);
+        if (!delta || right.length === size) return;
+        
+        for (let i = from; i <= Math.min(delta, to); i++)
+            iter([...right, i], delta - i);
+    }
+    
+    const result = [];
+    iter([], sum);
+    return result;
   }
 
-  return [str, luk, dex, int]
+  const min = 4;
+  const max = 12;
+  const nums = 4;
+  const total = 25;
+
+  const result = generate(min, max, nums, total);
+
+  let index = Math.floor(Math.random() * result.length);
+
+  return result[index];
 }
