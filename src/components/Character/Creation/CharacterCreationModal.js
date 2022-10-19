@@ -1,13 +1,21 @@
 import { useState } from "react";
-import defaultCharacter from "../../helpers/DefaultCharacter";
-import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
+import defaultCharacter from "../../../helpers/DefaultCharacter";
+import { setCharacter } from "../../../state_management/redux/Character/CharacterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import RandomStats from "./RandomStats";
+import StatRoller from "../../../helpers/StatRoller";
 
 export default function CharacterCreationModal(props) {
-
+  
+  const initialStats = StatRoller();
   const [name, setName] = useState("");
   const [archetype, setArchetype] = useState(null);
+  const [str, setStr] = useState(initialStats[0]);
+  const [luk, setLuk] = useState(initialStats[1]);
+  const [dex, setDex] = useState(initialStats[2]);
+  const [int, setInt] = useState(initialStats[3]);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -76,6 +84,9 @@ export default function CharacterCreationModal(props) {
                         <p>Cygnus Knight</p>
                       </div>
                     </div>
+                  </div>
+                  <div>
+                    <RandomStats str={str} luk={luk} dex={dex} int={int}/>
                   </div>
                 </div>
                 {/*footer*/}

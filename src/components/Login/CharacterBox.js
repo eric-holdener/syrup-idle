@@ -1,4 +1,4 @@
-import CharacterCreationModal from "./CharacterCreationModal";
+import CharacterCreationModal from "../Character/Creation/CharacterCreationModal";
 import LoadCharacterNodal from "./LoadCharacterModal";
 import { useState } from "react";
 
