@@ -1,4 +1,4 @@
-export default function defaultCharacter(name, job) {
+export default function defaultCharacter(name, job, str, luk, dex, int) {
   let char_job = ""
   if (job == 1) {
     char_job = "Beginner"
@@ -17,10 +17,10 @@ export default function defaultCharacter(name, job) {
     currentMp: 10,
     exp: 0,
     availableAp: 0,
-    str: 5,
-    dex: 5,
-    int: 5,
-    luk: 5,
+    str: str,
+    dex: dex,
+    int: int,
+    luk: luk,
     xpTNL: 1144,
     inventory: {},
     equipment: {

@@ -26,7 +26,7 @@ export default function CharacterCreationModal(props) {
   }
 
   function createCharacter() {
-    let character = defaultCharacter(name, archetype)
+    let character = defaultCharacter(name, archetype, str, luk, dex, int)
     dispatch(setCharacter(character));
     let saves = localStorage.getItem("savegames");
     if (saves) {
