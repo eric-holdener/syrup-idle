@@ -40,6 +40,14 @@ export default function CharacterCreationModal(props) {
     navigate("/");
   }
 
+  function reroller() {
+    const newStats = StatRoller();
+    setStr(newStats[0]);
+    setLuk(newStats[1]);
+    setDex(newStats[2]);
+    setInt(newStats[3]);
+  }
+
   function renderModal() {
     if(!props.show){
         return null;
@@ -87,6 +95,7 @@ export default function CharacterCreationModal(props) {
                   </div>
                   <div>
                     <RandomStats str={str} luk={luk} dex={dex} int={int}/>
+                    <button onClick={() => reroller()}>Reroll</button>
                   </div>
                 </div>
                 {/*footer*/}
