@@ -1,6 +1,6 @@
-export default function DropCreator(etc, ore, common_equips, warrior_equips,
-                                    magician_equips, bowman_equips, thief_equips,
-                                    pirate_equips, useable_drops, maker_items) {
+export default function DropCreator(etc=[], ore=[], common_equips=[], warrior_equips=[],
+                                    magician_equips=[], bowman_equips=[], thief_equips=[],
+                                    pirate_equips=[], useable_drops=[], maker_items=[]) {
   return {
     etc: etc,
     ore: ore,
