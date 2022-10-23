@@ -1,16 +1,15 @@
 In Progress:
-  - Character Creation
-  - Selecting empty slot on character select screen will prompt to roll stats and select name
-  - Confirming will save to designated slot and load into game
-  - Selecting full slot will load that character
-  - Character deletion possible as well (delete button with are you sure modal)
+  - Default monster Creation
+  - Creating each monster available
+  - Creating maps
+  - Randomizer for selecting monsters in the map
 
 Sources for reseach:
   - MapleRoyals
   - https://bbb.hidden-street.net/
 
 Future To Dos:
-  - Adjust starting character stats
+  - 
 
 Down the line features:
   - Multiple starting classes (cygnus)
