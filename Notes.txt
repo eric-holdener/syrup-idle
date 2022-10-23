@@ -1,15 +1,17 @@
 In Progress:
-  - Default monster Creation
+  - Default monster Creation √
+  - Create a couple monsters to test with
+  - Create one map with monsters to test features
+  - Develop combat
   - Creating each monster available
-  - Creating maps
-  - Randomizer for selecting monsters in the map
+  - Creating all maps
 
 Sources for reseach:
   - MapleRoyals
   - https://bbb.hidden-street.net/
 
 Future To Dos:
-  - 
+  - Monster attack interval - a function using their speed stat
 
 Down the line features:
   - Multiple starting classes (cygnus)
