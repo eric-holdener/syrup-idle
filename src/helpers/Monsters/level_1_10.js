@@ -18,3 +18,11 @@ function RedSnail() {
 
   return MonsterCreator("Red Snail", 8, drops, 12, 18, -50, 30, 0, 35, 0, 3, 10, 0, 0, null, 0, 0, [], [1, 2, 3, 4, 5], [], 5);
 }
+
+export default function MonstersLvl1To10() {
+  return {
+    red_snail: RedSnail,
+    blue_snail: BlueSnail,
+    snail: Snail
+  }
+}

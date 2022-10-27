@@ -19,6 +19,7 @@ Future To Dos:
   - Add drops
   - Change placeholder names
   - Add in questing system
+  - Pare down locations to remove unnecessary bloat
 
 Down the line features:
   - Multiple starting classes (cygnus)
