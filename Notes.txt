@@ -1,10 +1,14 @@
-In Progress:
+Checklist:
   - Default monster Creation √
   - Create a couple monsters to test with
   - Create one map with monsters to test features
   - Develop combat
   - Creating each monster available
   - Creating all maps
+  - Develop how equipment will work
+  - Create sample equipments
+  - Develop drop logic in monsters
+  - Create all equipment
 
 Sources for reseach:
   - MapleRoyals
@@ -12,6 +16,7 @@ Sources for reseach:
 
 Future To Dos:
   - Monster attack interval - a function using their speed stat
+  - Add drops
 
 Down the line features:
   - Multiple starting classes (cygnus)
