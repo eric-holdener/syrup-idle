@@ -1,6 +1,6 @@
 Checklist:
   - Default monster Creation √
-  - Create a couple monsters to test with
+  - Create a couple monsters to test with √
   - Create one map with monsters to test features
   - Develop combat
   - Creating each monster available
@@ -17,6 +17,8 @@ Sources for reseach:
 Future To Dos:
   - Monster attack interval - a function using their speed stat
   - Add drops
+  - Change placeholder names
+  - Add in questing system
 
 Down the line features:
   - Multiple starting classes (cygnus)
