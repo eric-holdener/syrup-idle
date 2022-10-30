@@ -28,10 +28,20 @@ function RedSnail() {
     [], [1, 2, 3, 4, 5], [], 5);
 }
 
+function Stump() {
+  drops = DropCreator();
+  
+  return MonsterCreator(
+    "Stump", 8, drops, 12, 18, -70, 30,
+    0, 40, 0, 3, 10,0, 0, null, 0, 0,
+    [1], [2, 3, 4, 5], [], 4);
+}
+
 export default function MonstersLvl1To10() {
   return {
     red_snail: RedSnail,
     blue_snail: BlueSnail,
-    snail: Snail
+    snail: Snail,
+    stump: Stump
   }
 }

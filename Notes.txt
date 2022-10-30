@@ -1,7 +1,7 @@
 Checklist:
   - Default monster Creation √
   - Create a couple monsters to test with √
-  - Create one map with monsters to test features
+  - Create two maps with monsters to test features
   - Develop combat
   - Creating each monster available
   - Creating all maps
