@@ -10,6 +10,14 @@ function Thicket_Around_Beach_1() {
   )
 }
 
+// monsters not correct in this location, just for testing purposes
+function Thicket_Around_Beach_2() {
+  return DefaultLocation(
+    "Thicket Around the Beach 2",
+    [monsters_1_10[snail], monsters_1_10[stump]]
+  )
+}
+
 export default function LithHarborLocations() {
-  return [Thicket_Around_Beach_1]
+  return [Thicket_Around_Beach_1, Thicket_Around_Beach_2]
 }
