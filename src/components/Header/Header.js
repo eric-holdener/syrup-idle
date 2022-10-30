@@ -5,7 +5,7 @@ export default function Header() {
   const dispatch = useDispatch();
 
   return (
-    <div className="w-full h-1">
+    <div className="w-full">
       <button onClick={() => dispatch(clear())}>Logout</button>
     </div>
   )
