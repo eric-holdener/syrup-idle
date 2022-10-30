@@ -9,7 +9,7 @@ export default function MapGroup(props) {
       <button onClick={() => setShowing(true)}>Show location</button>
       {showing ? (
         <div>
-          <MapCard />
+          <MapCard locationName="lith_harbor"/>
           <button onClick={() => setShowing(false)}>Close</button>
         </div>
       ) : (

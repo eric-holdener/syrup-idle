@@ -1,41 +1,25 @@
 import { MonsterCreator } from "../MonsterCreator";
 import DropCreator from "../DropCreator";
 
-function Snail() {
-  drops = DropCreator();
-
-  return MonsterCreator(
-    "Snail", 3, drops, 4, 6, -65, 20, 
+const Snail = MonsterCreator(
+    "Snail", 3, {}, 4, 6, -65, 20, 
     0, 22, 0, 0, 0, 0, 0, null, 0, 0, 
     [], [1, 2, 3, 4, 5], [], 1);
-}
 
-function BlueSnail() {
-  drops = DropCreator();
+const BlueSnail = MonsterCreator(
+  "Blue Snail", 4, {}, 8, 12, -50, 20, 
+  0, 27, 0, 0, 0, 0, 0, null, 0, 0, 
+  [], [1, 2, 3, 4, 5], [], 2);
 
-  return MonsterCreator(
-    "Blue Snail", 4, drops, 8, 12, -50, 20, 
-    0, 27, 0, 0, 0, 0, 0, null, 0, 0, 
-    [], [1, 2, 3, 4, 5], [], 2);
-}
-
-function RedSnail() {
-  drops = DropCreator();
-
-  return MonsterCreator(
-    "Red Snail", 8, drops, 12, 18, -50, 30, 
+const RedSnail = MonsterCreator(
+    "Red Snail", 8, {}, 12, 18, -50, 30, 
     0, 35, 0, 3, 10, 0, 0, null, 0, 0, 
     [], [1, 2, 3, 4, 5], [], 5);
-}
 
-function Stump() {
-  drops = DropCreator();
-  
-  return MonsterCreator(
-    "Stump", 8, drops, 12, 18, -70, 30,
+const Stump = MonsterCreator(
+    "Stump", 8, {}, 12, 18, -70, 30,
     0, 40, 0, 3, 10,0, 0, null, 0, 0,
     [1], [2, 3, 4, 5], [], 4);
-}
 
 export default function MonstersLvl1To10() {
   return {

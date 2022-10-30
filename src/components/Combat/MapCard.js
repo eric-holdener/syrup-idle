@@ -1,5 +1,11 @@
-export default function MapCard() {
+import AllLocations from "../../helpers/Locations/AllLocations"
+
+export default function MapCard(props) {
+  maps = AllLocations[props.locationName];
   return (
-    <p>Map Card</p>
+    <>
+      <p>map card</p>
+      <button onClick={() => console.log(maps)}>Test</button>
+    </>
   )
 }
