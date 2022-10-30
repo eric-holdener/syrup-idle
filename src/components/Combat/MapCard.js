@@ -1,7 +1,7 @@
-import AllLocations from "../../helpers/Locations/AllLocations"
+import { All_Locations } from "../../helpers/Locations/AllLocations";
 
 export default function MapCard(props) {
-  maps = AllLocations[props.locationName];
+  const maps = All_Locations[props.locationName];
   return (
     <>
       <p>map card</p>
