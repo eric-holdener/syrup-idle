@@ -10,20 +10,27 @@ export default function CombatMain() {
     setCurrentMonster(randomMonster);
   }
 
+  function resetStates() {
+    setCurrentLocation(null);
+    setCurrentMonster(null);
+  }
+
   return (
     <div>
       <p>Combat</p>
       <MapGroup name="Lith Harbor" setLocation={setCurrentLocation} setMonster={setCurrentMonster}/>
-      <button onClick={() => console.log(currentLocation)}>Test Location</button>
       {currentLocation ? (
-        <>
+        <div className="flex flex-col m-3 p-3 items-left gap-3">
           <p>Current Location: {currentLocation.name}</p>
           <p>Current Monster: {currentMonster.name}</p>
           
-          <button onClick={() => newMonster()}>Roll New Monster</button>
-        </>
+          <button onClick={() => newMonster()} className="bg-black text-white rounded p-1">Roll New Monster</button>
+          <button onClick={() => resetStates()} className="bg-black text-white rounded p-1">Run from Fight</button>
+        </div>
       ) : (
-        <></>
+        <>
+          <p>No location currently selected</p>
+        </>
       )}
     </div>
 
