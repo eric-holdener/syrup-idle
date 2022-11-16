@@ -18,7 +18,7 @@ export default function Layout () {
           <>
             <Header />
             {character.currently_training ? (
-              <TickSystem time={10000} />
+              <TickSystem />
             ) : (
               <></>
             )}

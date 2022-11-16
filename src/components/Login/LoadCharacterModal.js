@@ -7,7 +7,6 @@ export default function LoadCharacterNodal(props) {
   const dispatch = useDispatch();
 
   function loadCharacter() {
-    console.log(props.char);
     dispatch(setCharacter(props.char));
     props.closeModal(false);
     navigate("/");
