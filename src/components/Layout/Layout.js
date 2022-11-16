@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import { useSelector } from "react-redux";
 import InfoSplash from "../Login/InfoSplash";
 import Header from "../Header/Header";
+import TickSystem from "../../helpers/TickSystem";
 
 export default function Layout () {
   const character = useSelector((state) => state.character);
@@ -14,7 +15,14 @@ export default function Layout () {
       </div>
       <div className="main-content w-5/6 h-full fixed inset-y-0 right-0 bg-orange-300">
         {character ? (
-          <Header />
+          <>
+            <Header />
+            {character.currently_training ? (
+              <TickSystem time={10000} />
+            ) : (
+              <></>
+            )}
+          </>
         ) : (
           <></>
         )}

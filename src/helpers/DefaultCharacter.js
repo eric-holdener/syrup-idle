@@ -45,7 +45,8 @@ export default function defaultCharacter(name, job, str, luk, dex, int) {
     },
     equip_inventory: {},
     use_inventory: {},
-    etc_inventory: {}
+    etc_inventory: {},
+    currently_training: null
   }
   return default_char
 }
