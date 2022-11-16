@@ -11,6 +11,7 @@ export default function Sidebar() {
       <SidebarItem name="Inventory" image={ShirtImage} link="/inventory/equip" skill={false} character={false}/>
       <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
       <SidebarItem name="Potions" image={RedPotionSprite} link="/brewing" skill={true} character={false}/>
+      <SidebarItem name="Herb Collection" image={RedPotionSprite} link="/herbs" skill={true} character={false}/>
     </>
   )
 }

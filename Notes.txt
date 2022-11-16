@@ -1,9 +1,11 @@
 Checklist:
-  - Default monster Creation √
-  - Create a couple monsters to test with √
-  - Create two maps with monsters √
-  - Random monster selection in locations √
+  - Create herbs for herb collection
+  - Brainstorm / concept herb collection
   - Tick system
+  - Create potions to craft
+  - Concept potion crafting / implement
+  - Create ores to mine
+  - Concept mining / implement
   - Statistics and calculations for damage
   - Develop combat
   - Creating each monster available
@@ -12,6 +14,7 @@ Checklist:
   - Create sample equipments
   - Develop drop logic in monsters
   - Create all equipment
+  - Evaluate game balancing
 
 Sources for reseach:
   - MapleRoyals
@@ -26,3 +29,9 @@ Future To Dos:
 
 Down the line features:
   - Multiple starting classes (cygnus)
+
+Done:
+  - Default monster Creation √
+  - Create a couple monsters to test with √
+  - Create two maps with monsters √
+  - Random monster selection in locations √

@@ -12,6 +12,7 @@ import UseTab from './components/Character/inventory/UseTab';
 import EtcTab from './components/Character/inventory/EtcTab';
 import LoginSplash from './components/Login/LoginSplash';
 import AuthChecker from './components/Route_Protection/AuthChecker';
+import HerbsMain from './components/Herbs/HerbsMain';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route index element={<AuthChecker><Character /></AuthChecker>} />
               <Route path="combat" element={<AuthChecker><CombatMain /></AuthChecker>} />
               <Route path="brewing" element={<AuthChecker><BrewingMain /></AuthChecker>} />
+              <Route path="herbs" element={<AuthChecker><HerbsMain /></AuthChecker>} />
               <Route path="inventory" element={<AuthChecker><Inventory /></AuthChecker>}>
                 <Route path="equip" element={<AuthChecker><EquipmentTab /></AuthChecker>} />
                 <Route path="use" element={<AuthChecker><UseTab /></AuthChecker>} />
