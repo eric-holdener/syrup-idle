@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import StopTraining from "../../helpers/StopTrainingButton";
 import { setTraining } from "../../state_management/redux/Character/CharacterSlice";
 
 export default function HerbsMain() {
@@ -19,6 +20,7 @@ export default function HerbsMain() {
     <>
       <p>Herbs</p>
       <button onClick={() => setHerbTraining(marjaram_flower)}>Marjaram Flower</button>
+      <StopTraining/>
     </>
   )
 }
