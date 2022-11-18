@@ -6,11 +6,18 @@ export default function HerbsMain() {
   const character = useSelector((state) => state.character);
   const dispatch = useDispatch();
 
-  const marjaram_flower = {
-    name: "Marjaram Flower",
+  const marjoram_flower = {
+    name: "Marjoram Flower",
     time: 2000,
     drop_range: [1, 2, 3]
   }
+
+  const marjoram_seed = {
+    name: "Marjoram Seed",
+    time: 3000,
+    drop_range: [2, 3, 4]
+  }
+
 
   function setHerbTraining(herb) {
     dispatch(setTraining({skill_tree: "herbs", item: herb}));
@@ -19,7 +26,8 @@ export default function HerbsMain() {
   return (
     <>
       <p>Herbs</p>
-      <button onClick={() => setHerbTraining(marjaram_flower)}>Marjaram Flower</button>
+      <button onClick={() => setHerbTraining(marjoram_flower)}>Marjaram Flower</button>
+      <button onClick={() => setHerbTraining(marjoram_seed)}>Marjaram Seed</button>
       <StopTraining/>
     </>
   )

@@ -8,10 +8,11 @@ export default function TickSystem() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(character.currently_training.item.name);
-      console.log(character.currently_training.item.time);
-      const randomElement = drop_range[Math.floor(Math.random() * drop_range.length)];
-      console.log(randomElement);
+      console.log(character.currently_training);
+      // console.log(character.currently_training.item.name);
+      // console.log(character.currently_training.item.time);
+      // const randomElement = drop_range[Math.floor(Math.random() * drop_range.length)];
+      // console.log(randomElement);
     }, time);
 
   return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
