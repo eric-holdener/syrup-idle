@@ -22,7 +22,18 @@ export default function defaultCharacter(name, job, str, luk, dex, int) {
     int: int,
     luk: luk,
     xpTNL: 1144,
-    inventory: {},
+    inventory: [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
     equipment: {
       cap: null,
       medal: null,
@@ -43,9 +54,6 @@ export default function defaultCharacter(name, job, str, luk, dex, int) {
       belt: null,
       shoes: null
     },
-    equip_inventory: {},
-    use_inventory: {},
-    etc_inventory: {},
     currently_training: null
   }
   return default_char

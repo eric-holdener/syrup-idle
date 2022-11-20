@@ -26,6 +26,7 @@ Future To Dos:
   - Change placeholder names
   - Add in questing system
   - Pare down locations to remove unnecessary bloat
+  - Refactor new item in inventory system to dynamically pick the correct inventory that an item will be stored in
 
 Down the line features:
   - Multiple starting classes (cygnus)
