@@ -1,17 +1,38 @@
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
+import InventoryBox from "./inventory/InventoryBox";
+import ItemBox from "./inventory/ItemBox";
+import { useState } from "react";
 
 export default function Inventory() {
+  const character = useSelector((state) => state.character);
+  const [ActiveInventory, SetActiveInventory] = useState(0);
+
+  function DisplayAllInventory(inventory) {
+    for (let i = 0; i < inventory.length; i++) {
+      return (
+        <InventoryBox boxnumber={i} setActive={SetActiveInventory}/> 
+      )
+    }
+  }
+
+  function DisplayActiveInventory(inventory) {
+    const display_active = inventory[ActiveInventory];
+    for (let i = 0; i < display_active.length; i++) {
+      return (
+        <ItemBox item={display_active[i]} />
+      )
+    }
+  }
 
   return (
     <>
       <div className="flex justify-start w-full p-3 gap-3">
-        <Link to="equip" className="border-black border bg-white rounded-full w-1/12 flex justify-center">Equipment</Link>
-        <Link to="use" className="border-black border bg-white rounded-full w-1/12 flex justify-center">Use</Link>
-        <Link to="etc" className="border-black border bg-white rounded-full w-1/12 flex justify-center">Etc</Link>
+        {DisplayAllInventory(character.inventory)}
       </div>
       <div>
-        <Outlet />
+        {DisplayActiveInventory(character.inventory)}
       </div>
     </>
 

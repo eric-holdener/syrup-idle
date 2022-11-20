@@ -3,7 +3,6 @@ import StopTraining from "../../helpers/StopTrainingButton";
 import { setTraining } from "../../state_management/redux/Character/CharacterSlice";
 
 export default function HerbsMain() {
-  const character = useSelector((state) => state.character);
   const dispatch = useDispatch();
 
   const marjoram_flower = {
