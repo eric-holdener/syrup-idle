@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import AddToInventory from "./AddToInventory";
 
 export default function TickSystem() {
   const character = useSelector((state) => state.character);
@@ -10,8 +11,8 @@ export default function TickSystem() {
     const interval = setInterval(() => {
       console.log(character.currently_training.item.name);
       console.log(character.currently_training.item.time);
-      const randomElement = drop_range[Math.floor(Math.random() * drop_range.length)];
-      console.log(randomElement);
+      const randomQuantity = drop_range[Math.floor(Math.random() * drop_range.length)];
+      AddToInventory(character.currently_training.item.name, randomQuantity);
     }, time);
 
   return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
