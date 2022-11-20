@@ -15,6 +15,7 @@ export default function Inventory() {
         {character.inventory.map((slot, index) => <InventoryBox boxnumber={index} setActive={SetActiveInventory} />)}
       </div>
       <div>
+        <button onClick={() => console.log(character.inventory)}>Check Inventory</button>
         {character.inventory[ActiveInventory].map((item) => <ItemBox item={item} />)}
       </div>
     </>

@@ -51,7 +51,10 @@ const characterSlice = createSlice({
       state.currently_training = payload;
     },
     addItem: (state, { payload }) => {
+      console.log(payload);
+      console.log(state.inventory[0]);
       state.inventory[0].push(payload);
+      return state;
     }
   }
 })
