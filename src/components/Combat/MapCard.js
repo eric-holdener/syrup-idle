@@ -1,5 +1,4 @@
 import { All_Locations } from "../../helpers/Locations/AllLocations";
-import { MonsterCreator } from "../../helpers/MonsterCreator";
 
 export default function MapCard(props) {
   const maps = All_Locations[props.locationName];

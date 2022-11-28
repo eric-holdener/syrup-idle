@@ -1,8 +1,8 @@
 export default function defaultCharacter(name, job, str, luk, dex, int) {
   let char_job = ""
-  if (job == 1) {
+  if (job === 1) {
     char_job = "Beginner"
-  } else if (job == 2) {
+  } else if (job === 2) {
     char_job = "Noblesse"
   }
 
@@ -43,9 +43,7 @@ export default function defaultCharacter(name, job, str, luk, dex, int) {
       belt: null,
       shoes: null
     },
-    equip_inventory: {},
-    use_inventory: {},
-    etc_inventory: {}
+    currently_training: null
   }
   return default_char
 }

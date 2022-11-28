@@ -1,4 +1,4 @@
-import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
+import { setCharacter } from "../../state_management/Redux/Character/CharacterSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -7,7 +7,6 @@ export default function LoadCharacterNodal(props) {
   const dispatch = useDispatch();
 
   function loadCharacter() {
-    console.log(props.char);
     dispatch(setCharacter(props.char));
     props.closeModal(false);
     navigate("/");

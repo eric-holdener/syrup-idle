@@ -1,5 +1,5 @@
 import { MonsterCreator } from "../MonsterCreator";
-import DropCreator from "../DropCreator";
+// import DropCreator from "../DropCreator";
 
 const Snail = MonsterCreator(
     "Snail", 3, {}, 4, 6, -65, 20, 

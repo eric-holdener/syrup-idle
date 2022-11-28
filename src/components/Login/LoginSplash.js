@@ -1,9 +1,11 @@
 import CharacterBox from "./CharacterBox";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function LoginSplash() {
 
-  const [characters, setCharacters] = useState(() => {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
     const saved = localStorage.getItem("savegames");
     let savegames = []
     if (saved) {
@@ -13,8 +15,8 @@ export default function LoginSplash() {
       }
     };
 
-    return savegames;
-  });
+    setCharacters(savegames);
+  }, [])
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
