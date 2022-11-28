@@ -1,4 +1,4 @@
-import { setCharacter } from "../../state_management/redux/Character/CharacterSlice";
+import { setCharacter } from "../../state_management/Redux/Character/CharacterSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 

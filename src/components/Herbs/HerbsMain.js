@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import StopTraining from "../../helpers/StopTrainingButton";
-import { setTraining } from "../../state_management/redux/Character/CharacterSlice";
+import { setTraining } from "../../state_management/Redux/Character/CharacterSlice";
 
 export default function HerbsMain() {
   const dispatch = useDispatch();

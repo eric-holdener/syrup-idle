@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { setTraining } from "../state_management/redux/Character/CharacterSlice";
+import { setTraining } from "../state_management/Redux/Character/CharacterSlice";
 
 export default function StopTraining() {
   const dispatch = useDispatch();

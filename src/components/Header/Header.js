@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { clear } from "../../state_management/redux/Character/CharacterSlice";
+import { clear } from "../../state_management/Redux/Character/CharacterSlice";
 
 export default function Header() {
   const dispatch = useDispatch();

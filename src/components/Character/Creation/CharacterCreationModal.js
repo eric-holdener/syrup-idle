@@ -1,7 +1,7 @@
 import { useState } from "react";
 import defaultCharacter from "../../../helpers/DefaultCharacter";
-import { setCharacter } from "../../../state_management/redux/Character/CharacterSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { setCharacter } from "../../../state_management/Redux/Character/CharacterSlice";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import RandomStats from "./RandomStats";
 import StatRoller from "../../../helpers/StatRoller";
@@ -129,7 +129,3 @@ export default function CharacterCreationModal(props) {
     </>
   )
 }
-
-{/* <button onClick={() => props.closeModal()}>
-Close
-</button> */}
