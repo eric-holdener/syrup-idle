@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
 import InventoryBox from "./inventory/InventoryBox";
 import ItemBox from "./inventory/ItemBox";

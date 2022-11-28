@@ -1,8 +1,8 @@
 export default function defaultCharacter(name, job, str, luk, dex, int) {
   let char_job = ""
-  if (job == 1) {
+  if (job === 1) {
     char_job = "Beginner"
-  } else if (job == 2) {
+  } else if (job === 2) {
     char_job = "Noblesse"
   }
 

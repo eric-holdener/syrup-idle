@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import StopTraining from "../../helpers/StopTrainingButton";
 import { setTraining } from "../../state_management/Redux/Character/CharacterSlice";
 

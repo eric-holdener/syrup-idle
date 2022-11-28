@@ -30,6 +30,8 @@ const characterSlice = createSlice({
         case 4:
           state.luk += 1;
           break;
+        default:
+          console.log("Increase stat error - Stat Increase out of bounds");
       };
       state.availableAp -= 1;
     },
