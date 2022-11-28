@@ -16,24 +16,27 @@ const characterSlice = createSlice({
       state.hp += healed;
     },
     increaseStat: (state, { payload }) => {
-      console.log(payload);
-      switch(payload) {
-        case 1:
-          state.str += 1;
-          break;
-        case 2:
-          state.dex += 1;
-          break;
-        case 3:
-          state.int += 1;
-          break;
-        case 4:
-          state.luk += 1;
-          break;
-        default:
-          console.log("Increase stat error - Stat Increase out of bounds");
-      };
-      state.availableAp -= 1;
+      if (state.availableAp > 0) {
+        switch(payload) {
+          case 1:
+            state.str += 1;
+            break;
+          case 2:
+            state.dex += 1;
+            break;
+          case 3:
+            state.int += 1;
+            break;
+          case 4:
+            state.luk += 1;
+            break;
+          default:
+            console.log("Increase stat error - stat not recognized.");
+        };
+        state.availableAp -= 1;
+      } else {
+        console.log("Increase stat error - not enough AP to process.");
+      }
     },
     addExp: (state, { payload }) => {
       state.exp += payload;
@@ -53,10 +56,28 @@ const characterSlice = createSlice({
       state.currently_training = payload;
     },
     addItem: (state, { payload }) => {
+      console.log(`payload =`);
       console.log(payload);
-      console.log(state.inventory[0]);
-      state.inventory[0].push(payload);
-      return state;
+      let itemExists = false;
+      for (const item of state.inventory) {
+        if (item.item.id === payload.item.id) {
+          itemExists = true;
+          break;
+        }
+      };
+      if (itemExists) {
+        return {
+          ...state,
+          inventory: state.inventory.map(
+            (item) => item.item.id === payload.item.id ? {...item, quantity: item.quantity += payload.quantity} : item
+          )
+        };
+      } else {
+        return {
+          ...state,
+          inventory: [...state.inventory, payload]
+        };
+      };
     }
   }
 })
