@@ -56,28 +56,19 @@ const characterSlice = createSlice({
       state.currently_training = payload;
     },
     addItem: (state, { payload }) => {
-      console.log(`payload =`);
       console.log(payload);
-      let itemExists = false;
-      for (const item of state.inventory) {
-        if (item.item.id === payload.item.id) {
-          itemExists = true;
-          break;
-        }
-      };
-      if (itemExists) {
-        return {
-          ...state,
-          inventory: state.inventory.map(
-            (item) => item.item.id === payload.item.id ? {...item, quantity: item.quantity += payload.quantity} : item
-          )
-        };
+      const id = payload.item.id
+      if (id in state.inventory) {
+        const quantity = payload.quantity + state.inventory[id].quantity;
+        state.inventory[id] = { ...state.inventory[id], quantity: quantity}
       } else {
         return {
           ...state,
-          inventory: [...state.inventory, payload]
-        };
-      };
+          inventory: {
+            ...state.inventory, [id]: payload
+          }
+        }
+      }
     }
   }
 })

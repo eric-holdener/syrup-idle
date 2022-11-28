@@ -22,7 +22,7 @@ export default function defaultCharacter(name, job, str, luk, dex, int) {
     int: int,
     luk: luk,
     xpTNL: 1144,
-    inventory: [],
+    inventory: {},
     equipment: {
       cap: null,
       medal: null,

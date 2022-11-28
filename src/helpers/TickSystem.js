@@ -9,8 +9,6 @@ export default function TickSystem() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(`item =`);
-      console.log(training.item);
       const randomQuantity = training.item.drop_range[Math.floor(Math.random() * training.item.drop_range.length)];
       const payload = {
         item: training.item,
