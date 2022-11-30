@@ -5,16 +5,24 @@ import { useState } from "react";
 
 export default function Inventory() {
   const character = useSelector((state) => state.character);
-  const [ActiveInventory, SetActiveInventory] = useState(0);
+  const [ActiveInventory, SetActiveInventory] = useState("equipInventory");
 
   return (
     <>
       <div className="flex justify-start w-full p-3 gap-3">
-        {character.inventory.map((slot, index) => <InventoryBox boxnumber={index} setActive={SetActiveInventory} />)}
+        <InventoryBox boxname={"Equipment"} setActive={SetActiveInventory} inventoryType="equipInventory"/>
+        <InventoryBox boxname={"Use"} setActive={SetActiveInventory} inventoryType="useInventory"/>
+        <InventoryBox boxname={"Etc"} setActive={SetActiveInventory} inventoryType="etcInventory"/>
       </div>
       <div>
         <button onClick={() => console.log(character.inventory)}>Check Inventory</button>
-        {character.inventory[ActiveInventory].map((item) => <ItemBox item={item} />)}
+        {
+          Object.keys(character[ActiveInventory]).map((key, index) => {
+            return (
+              <p>{character[ActiveInventory][key].item.name}</p>
+            )
+          })
+        }
       </div>
     </>
 
