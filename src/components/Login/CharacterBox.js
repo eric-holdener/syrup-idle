@@ -1,5 +1,5 @@
 import CharacterCreationModal from "../Character/Creation/CharacterCreationModal";
-import LoadCharacterNodal from "./LoadCharacterModal";
+import LoadCharacterModal from "./LoadCharacterModal";
 import { useState } from "react";
 
 export default function CharacterBox(props) {
@@ -10,10 +10,8 @@ export default function CharacterBox(props) {
     let saves = localStorage.getItem("savegames");
     let json = JSON.parse(saves);
     for (let i = 0; i < json.length; i++) {
-      console.log(json[i]);
       json.splice(props.id, 1);
     };
-    console.log(json);
     localStorage.setItem("savegames", JSON.stringify(json));
     window.location.reload(true);
   }
@@ -31,7 +29,7 @@ export default function CharacterBox(props) {
               Delete Character
             </button>
           </div>
-          <LoadCharacterNodal closeModal={setShowCharModal} show={showCharModal} char={props.char}/>
+          <LoadCharacterModal closeModal={setShowCharModal} show={showCharModal} char={props.char} id={props.id}/>
         </>
       ) : (
         <>
@@ -40,7 +38,7 @@ export default function CharacterBox(props) {
             <p>New Character</p>
           </button>
         </div>
-        <CharacterCreationModal setModal={setShowNewModal} show={showNewModal} />
+        <CharacterCreationModal setModal={setShowNewModal} show={showNewModal} id={props.id} />
         </>
       )}
     </>

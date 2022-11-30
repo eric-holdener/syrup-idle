@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit"
 import characterReducer from "./Character/CharacterSlice";
+import savegameReducer from "./Character/SavegameSlice";
 
 const Store = configureStore({
   reducer: {
-    character: characterReducer
+    character: characterReducer,
+    savegame: savegameReducer
   }
 })
 

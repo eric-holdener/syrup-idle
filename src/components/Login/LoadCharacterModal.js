@@ -1,13 +1,15 @@
 import { setCharacter } from "../../state_management/Redux/Character/CharacterSlice";
+import { createPointer } from "../../state_management/Redux/Character/SavegameSlice";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-export default function LoadCharacterNodal(props) {
+export default function LoadCharacterModal(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   function loadCharacter() {
     dispatch(setCharacter(props.char));
+    dispatch(createPointer(props.id));
     props.closeModal(false);
     navigate("/");
   }

@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import RandomStats from "./RandomStats";
 import StatRoller from "../../../helpers/StatRoller";
+import { createPointer } from "../../../state_management/Redux/Character/SavegameSlice";
 
 export default function CharacterCreationModal(props) {
   
@@ -37,6 +38,7 @@ export default function CharacterCreationModal(props) {
       localStorage.setItem("savegames", JSON.stringify([character]))
     }
     props.setModal(false);
+    dispatch(createPointer(props.id));
     navigate("/");
   }
 
