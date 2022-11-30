@@ -6,17 +6,25 @@ import { useSelector } from "react-redux";
 export default function Header() {
   const dispatch = useDispatch();
   const save =  useSelector((state) => state.savegame);
+  const character = useSelector((state) => state.character);
 
-
-  function logout() {
+  function logoutButton() {
     dispatch(clear());
     dispatch(clearSave());
   }
 
+  function saveButton() {
+    let localSaves = localStorage.getItem("savegames");
+    let parsedSaves = JSON.parse(localSaves);
+    parsedSaves[save] = character;
+    localStorage.setItem("savegames", JSON.stringify(parsedSaves));
+    console.log("game saved");
+  }
+
   return (
     <div className="w-full">
-      <button onClick={() => logout()}>Logout</button>
-      <button onClick={() => console.log(save)}>Test Pointer</button>
+      <button onClick={() => logoutButton()}>Logout</button>
+      <button onClick={() => saveButton()}>Save Game</button>
     </div>
   )
 
