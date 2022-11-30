@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
-import { clear } from "../../state_management/Redux/Character/CharacterSlice";
-import { clearSave } from "../../state_management/Redux/Character/SavegameSlice";
+import { clear } from "../../../state_management/Redux/Character/CharacterSlice";
+import { clearSave } from "../../../state_management/Redux/Character/SavegameSlice";
 import { useSelector } from "react-redux";
 
 export default function Header() {
@@ -18,7 +18,6 @@ export default function Header() {
     let parsedSaves = JSON.parse(localSaves);
     parsedSaves[save] = character;
     localStorage.setItem("savegames", JSON.stringify(parsedSaves));
-    console.log("game saved");
   }
 
   return (
