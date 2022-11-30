@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import { useSelector } from "react-redux";
 import InfoSplash from "../Login/InfoSplash";
-import Header from "../Header/Header";
+import Header from "./Header/Header";
 import TickSystem from "../../helpers/TickSystem";
 
 export default function Layout () {
