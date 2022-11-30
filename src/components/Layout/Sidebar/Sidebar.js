@@ -7,11 +7,30 @@ import ShirtImage from "../../../images/sprites/white-shirt.png"
 export default function Sidebar() {
   return (
     <>
-      <SidebarItem name="Character" image={CharacterImage} link="/" skill={false} character={true}/>
-      <SidebarItem name="Inventory" image={ShirtImage} link="/inventory" skill={false} character={false}/>
-      <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
-      <SidebarItem name="Potions" image={RedPotionSprite} link="/brewing" skill={true} character={false}/>
-      <SidebarItem name="Herb Collection" image={RedPotionSprite} link="/herbs" skill={true} character={false}/>
+      <div>
+        <SidebarItem name="Character" image={CharacterImage} link="/" skill={false} character={true}/>
+        <SidebarItem name="Inventory" image={ShirtImage} link="/inventory" skill={false} character={false}/>
+      </div>
+      <div>
+        <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
+      </div>
+      <div>
+        <SidebarItem name="Gathering" image={RedPotionSprite} link="/gathering" skill={true} character={false}/>
+        <SidebarItem name="Fishing" image={RedPotionSprite} link="/fishing" skill={true} character={false}/>
+        <SidebarItem name="Mining" image={RedPotionSprite} link="/mining" skill={true} character={false}/>
+        <SidebarItem name="Farming" image={RedPotionSprite} link="/farming" skill={true} character={false}/>
+        <SidebarItem name="Thieving" image={RedPotionSprite} link="/thieving" skill={true} character={false}/>
+      </div>
+      <div>
+        <SidebarItem name="Herbalism" image={RedPotionSprite} link="/herbalism" skill={true} character={false}/>
+        <SidebarItem name="Cooking" image={RedPotionSprite} link="/cooking" skill={true} character={false}/>
+        <SidebarItem name="Smithing" image={RedPotionSprite} link="/smithing" skill={true} character={false}/>
+      </div>
+      <div>
+        <SidebarItem name="Alchemy" image={RedPotionSprite} link="/alchemy" skill={true} character={false}/>
+        <SidebarItem name="Forging" image={RedPotionSprite} link="/forging" skill={true} character={false}/>
+        <SidebarItem name="Crafting" image={RedPotionSprite} link="/crafting" skill={true} character={false}/>
+      </div>
     </>
   )
 }
