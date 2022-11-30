@@ -36,8 +36,7 @@ export default function HerbsMain() {
       <button onClick={() => setHerbTraining(marjoram_flower)}>Marjaram Flower</button>
       <button onClick={() => setHerbTraining(marjoram_seed)}>Marjaram Seed</button>
       <StopTraining/>
-      <button onClick={() => console.log(character.inventory)}>Test Inventory</button>
-      <button onClick={() => console.log(character.currently_training)}>Test Current training</button>
+      <button onClick={() => console.log(character)}>Test Character</button>
     </>
   )
 }

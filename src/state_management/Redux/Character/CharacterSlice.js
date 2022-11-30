@@ -65,19 +65,29 @@ const characterSlice = createSlice({
       const id = payload.item.id;
 
       if (payload.type === 1) {
-        
+        inventoryType = "equipInventory";
+      } else if (payload.type === 2) {
+        inventoryType = "useInventory";
+      } else if (payload.type === 3) {
+        inventoryType = "etcInventory";
+      } else {
+        console.log("Invalid inventory type detected");
+        return
       }
-      // if (id in state.inventory) {
-      //   const quantity = payload.quantity + state.inventory[id].quantity;
-      //   state.inventory[id] = { ...state.inventory[id], quantity: quantity}
-      // } else {
-      //   return {
-      //     ...state,
-      //     inventory: {
-      //       ...state.inventory, [id]: payload
-      //     }
-      //   }
-      // }
+
+      if (inventoryType != null) {
+        if (id in state[inventoryType]) {
+          const quantity = payload.item.quantity + state[inventoryType][id].item.quantity;
+          state[inventoryType][id].item = { ...state[inventoryType][id].item, quantity: quantity}
+        } else {
+          return {
+            ...state,
+            [inventoryType]: {
+              ...state[inventoryType], [id]: payload
+            }
+          }
+        }
+      }
     }
   }
 })
