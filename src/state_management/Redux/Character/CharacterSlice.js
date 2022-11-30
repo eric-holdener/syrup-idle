@@ -57,18 +57,27 @@ const characterSlice = createSlice({
     },
     addItem: (state, { payload }) => {
       console.log(payload);
-      const id = payload.item.id
-      if (id in state.inventory) {
-        const quantity = payload.quantity + state.inventory[id].quantity;
-        state.inventory[id] = { ...state.inventory[id], quantity: quantity}
-      } else {
-        return {
-          ...state,
-          inventory: {
-            ...state.inventory, [id]: payload
-          }
-        }
+      // item types:
+      // 1 - equipment
+      // 2 - usables
+      // 3 - etc (crafting items)
+      let inventoryType = null;
+      const id = payload.item.id;
+
+      if (payload.type === 1) {
+        
       }
+      // if (id in state.inventory) {
+      //   const quantity = payload.quantity + state.inventory[id].quantity;
+      //   state.inventory[id] = { ...state.inventory[id], quantity: quantity}
+      // } else {
+      //   return {
+      //     ...state,
+      //     inventory: {
+      //       ...state.inventory, [id]: payload
+      //     }
+      //   }
+      // }
     }
   }
 })

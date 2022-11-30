@@ -1,7 +1,6 @@
 Checklist:
   - Create herbs for herb collection
   - Brainstorm / concept herb collection
-  - Tick system
   - Create potions to craft
   - Concept potion crafting / implement
   - Create ores to mine
@@ -36,3 +35,12 @@ Done:
   - Create a couple monsters to test with √
   - Create two maps with monsters √
   - Random monster selection in locations √
+  - Tick system √
+
+Notes to Self:
+  Item types:
+    - 1: equipment
+    - 2: usables
+    - 3: etc
+  Skill Denotations:
+    - 1: Herb Collection

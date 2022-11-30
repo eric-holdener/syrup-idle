@@ -11,14 +11,18 @@ export default function HerbsMain() {
     id: 1,
     name: "Marjoram Flower",
     time: 2000,
-    drop_range: [1, 2, 3]
+    drop_range: [1, 2, 3],
+    type: 3,
+    skill: 1
   }
 
   const marjoram_seed = {
     id: 2,
     name: "Marjoram Seed",
     time: 3000,
-    drop_range: [2, 3, 4]
+    drop_range: [2, 3, 4],
+    type: 3,
+    skill: 1
   }
 
 

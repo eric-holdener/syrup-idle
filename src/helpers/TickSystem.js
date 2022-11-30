@@ -11,8 +11,12 @@ export default function TickSystem() {
     const interval = setInterval(() => {
       const randomQuantity = training.item.drop_range[Math.floor(Math.random() * training.item.drop_range.length)];
       const payload = {
-        item: training.item,
-        quantity: randomQuantity
+        type: training.item.type,
+        item: {
+          quantity: randomQuantity,
+          id: training.item.id,
+          name: training.item.name,
+        }
       }
       dispatch(addItem(payload));
 
