@@ -5,6 +5,19 @@ import CharacterImage from "../../../images/sprites/character.png"
 import ShirtImage from "../../../images/sprites/white-shirt.png"
 
 export default function Sidebar() {
+
+  function testXP() {
+    let xp1 = 100;
+    let nextLevel = 0;
+    console.log("fibonacci + exponential xp system");
+    for (let i = 1; i <= 99; i++) {
+      console.log(`level = ${i}`)
+      console.log(`total xp level = ${xp1}`)
+      nextLevel = Math.ceil(xp1 * 1.12);
+      console.log(`xp to get to next level = ${nextLevel - xp1}`)
+      xp1 = nextLevel;
+    }
+  }
   return (
     <>
       <div>
@@ -31,6 +44,8 @@ export default function Sidebar() {
         <SidebarItem name="Forging" image={RedPotionSprite} link="/forging" skill={true} character={false}/>
         <SidebarItem name="Crafting" image={RedPotionSprite} link="/crafting" skill={true} character={false}/>
       </div>
+
+      <button onClick={() => testXP()}>Test xp curve</button>
     </>
   )
 }
