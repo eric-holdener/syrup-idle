@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { clear } from "../../../state_management/Redux/Character/CharacterSlice";
 import { clearSave } from "../../../state_management/Redux/Character/SavegameSlice";
 import { useSelector } from "react-redux";
+import HeaderButton from "./HeaderButton";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -21,9 +22,10 @@ export default function Header() {
   }
 
   return (
-    <div className="w-full">
-      <button onClick={() => logoutButton()}>Logout</button>
-      <button onClick={() => saveButton()}>Save Game</button>
+    <div className="w-full flex gap-2 justify-end px-3 py-3 bg-slate-700">
+      <HeaderButton name={"Save Game"} function={saveButton}/>
+      <HeaderButton name={"Logout"} function={logoutButton}/>
+      <p>Character</p>
     </div>
   )
 
