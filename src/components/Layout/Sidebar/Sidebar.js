@@ -9,11 +9,13 @@ export default function Sidebar() {
 
   return (
     <div>
-      <div>
-        <img src={Logo}></img>
-        <p className="text-white">Syrup Idle</p>
-        <SidebarItem name="Character" image={CharacterImage} link="/" skill={false} character={true}/>
-        <SidebarItem name="Inventory" image={ShirtImage} link="/inventory" skill={false} character={false}/>
+      <div className="flex">
+        <img src={Logo} className="w-1/2"></img>
+        <div className="flex flex-col justify-center items-start pl-3 text-white text-xl">
+          <p>Syrup</p>
+          <p>Idle</p>
+        </div>
+
       </div>
       <div>
         <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>

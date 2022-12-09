@@ -25,7 +25,9 @@ export default function Header() {
     <div className="w-full flex gap-2 justify-end px-3 py-3 bg-slate-700">
       <HeaderButton name={"Save Game"} function={saveButton}/>
       <HeaderButton name={"Logout"} function={logoutButton}/>
-      <p>Character</p>
+      <p>Character Dropdown</p>
+      <p>Inventory Dropdown</p>
+      <p>Settings Dropdown</p>
     </div>
   )
 

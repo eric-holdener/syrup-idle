@@ -26,7 +26,9 @@ export default function Layout () {
         ) : (
           <></>
         )}
-        <Outlet />
+        <div className="p-5 w-full h-full">
+          <Outlet />
+        </div>
       </div>
     </div>
   )
