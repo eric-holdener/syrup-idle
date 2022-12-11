@@ -23,5 +23,5 @@ export default function TickSystem() {
     }, training.item.time);
 
   return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-  }, [training])
+  }, [training, dispatch])
 }

@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import InventoryBox from "./inventory/InventoryBox";
-import ItemBox from "./inventory/ItemBox";
 import { useState } from "react";
 
 export default function Inventory() {

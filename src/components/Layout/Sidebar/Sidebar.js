@@ -1,8 +1,6 @@
 import SidebarItem from "./SidebarItem";
-import SwordSprite from "../../../images/sprites/sword.png"
-import RedPotionSprite from "../../../images/sprites/red-potion.png"
-import CharacterImage from "../../../images/sprites/character.png"
-import ShirtImage from "../../../images/sprites/white-shirt.png"
+import SwordSprite from "../../../images/sprites/sword.png";
+import RedPotionSprite from "../../../images/sprites/red-potion.png";
 import Logo from "../Logo";
 
 export default function Sidebar() {

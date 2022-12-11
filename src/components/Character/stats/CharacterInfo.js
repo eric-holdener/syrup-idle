@@ -1,8 +1,7 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 
 export default function CharacterInfo() {
   const character = useSelector((state) => state.character);
-  const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col w-full bg-slate-200 border-2 divide-y divide-black border-black rounded">
