@@ -1,11 +1,10 @@
 import { useDispatch } from "react-redux";
-import StopTraining from "../../../../helpers/StopTrainingButton";
 import { setTraining } from "../../../../state_management/Redux/Character/CharacterSlice";
-import { useSelector } from "react-redux";
+import HerbHeader from "./HerbHeader";
+import HerbBox from "./HerbBox";
 
 export default function HerbsMain() {
   const dispatch = useDispatch();
-  const character = useSelector((state) => state.character);
 
   const marjoram_flower = {
     id: 1,
@@ -25,18 +24,19 @@ export default function HerbsMain() {
     skill: 1
   }
 
+  const all_herbs = [marjoram_flower, marjoram_seed]
+
 
   function setHerbTraining(herb) {
     dispatch(setTraining({skill_tree: "herbs", item: herb}));
   }
 
   return (
-    <>
-      <p>Herbs</p>
-      <button onClick={() => setHerbTraining(marjoram_flower)}>Marjaram Flower</button>
-      <button onClick={() => setHerbTraining(marjoram_seed)}>Marjaram Seed</button>
-      <StopTraining/>
-      <button onClick={() => console.log(character)}>Test Character</button>
-    </>
+    <div className="w-full h-full">
+      <HerbHeader />
+      <div className="flex gap-3 w-full h-5/6">
+        {all_herbs.map((herb) => <HerbBox herb={herb} setHerbTraining={setHerbTraining}/>)}
+      </div>
+    </div>
   )
 }
