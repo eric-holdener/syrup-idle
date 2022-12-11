@@ -3,20 +3,13 @@ import SwordSprite from "../../../images/sprites/sword.png"
 import RedPotionSprite from "../../../images/sprites/red-potion.png"
 import CharacterImage from "../../../images/sprites/character.png"
 import ShirtImage from "../../../images/sprites/white-shirt.png"
-import Logo from "../../../images/branding/placeholder-syrup.jpg"
+import Logo from "../Logo";
 
 export default function Sidebar() {
 
   return (
     <div>
-      <div className="flex">
-        <img src={Logo} className="w-1/2"></img>
-        <div className="flex flex-col justify-center items-start pl-3 text-white text-xl">
-          <p>Syrup</p>
-          <p>Idle</p>
-        </div>
-
-      </div>
+      <Logo />
       <div>
         <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
       </div>
