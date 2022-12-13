@@ -35,7 +35,7 @@ export default function HerbsMain() {
     <div className="w-full h-full">
       <HerbHeader />
       <div className="flex gap-3 w-full h-5/6">
-        {all_herbs.map((herb) => <HerbBox herb={herb} setHerbTraining={setHerbTraining}/>)}
+        {all_herbs.map((herb) => <HerbBox herb={herb} setHerbTraining={setHerbTraining} key={herb.name}/>)}
       </div>
     </div>
   )
