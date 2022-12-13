@@ -214,10 +214,114 @@ const herb_root = {
   skill: 1
 };
 
-const All_Herbs = [marjoram_seed, marjoram_flower, clary_sage, lavender_seed, lavender_flower,
-                  rosemary_seed, rosemary_flower, mandarin_seed, mandarin_flower, lemon_balm_seed,
-                  lemon_balm_flower, peppermint_flower, jasmine_seed, jasmine_flower, tea_tree_seed,
-                  tea_tree_flower, chamomile_seed, chamomile_flower, patchouli_seed, patchouli_flower,
-                  juniper_berry_seed, juniper_berry_flower, hyssop_flower, herb_root];
+const marjoram_plant = {
+  name: "Marjoram Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [marjoram_flower, marjoram_seed, herb_root]
+}
+
+const clary_sage_plant = {
+  name: "Clary Sage Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [clary_sage, herb_root]
+}
+
+const lavender_plant = {
+  name: "Lavender Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [lavender_seed, lavender_flower, herb_root]
+}
+
+const rosemary_plant = {
+  name: "Rosemary Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [rosemary_seed, rosemary_flower, herb_root]
+}
+
+const mandarin_plant = {
+  name: "Mandarin Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [mandarin_seed, mandarin_flower, herb_root]
+}
+
+const lemon_balm_plant = {
+  name: "Lemon Balm Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [lemon_balm_seed, lemon_balm_flower, herb_root]
+}
+
+const peppermint_plant = {
+  name: "Peppermint Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [peppermint_flower, herb_root]
+}
+
+const jasmine_plant = {
+  name: "Jasmine Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [jasmine_seed, jasmine_flower, herb_root]
+}
+
+const tea_tree_plant = {
+  name: "Tea Tree",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [tea_tree_seed, tea_tree_flower, herb_root]
+}
+
+const chamomile_plant = {
+  name: "Chamomile Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [chamomile_seed, chamomile_flower, herb_root]
+}
+
+const patchouli_plant = {
+  name: "Patchouli Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [patchouli_seed, patchouli_flower, herb_root]
+}
+
+const juniper_berry_plant = {
+  name: "Juniper Berry",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [juniper_berry_seed, juniper_berry_flower, herb_root]
+}
+
+const hyssop_plant = {
+  name: "Hyssop Plant",
+  time: 2000,
+  skill: 1,
+  req_lvl: 1,
+  items: [hyssop_flower, herb_root]
+}
+
+const All_Herbs = [marjoram_plant, clary_sage_plant, lavender_plant,
+                  rosemary_plant, mandarin_plant, lemon_balm_plant,
+                  peppermint_plant, jasmine_plant, tea_tree_plant,
+                  chamomile_plant, patchouli_plant, juniper_berry_plant,
+                  hyssop_plant];
 
 export { All_Herbs }
