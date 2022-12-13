@@ -4,17 +4,17 @@ import { useEffect, useState } from "react";
 export default function TimerBar() {
   const character = useSelector((state) => state.character);
   const training = character.currently_training;
-  const trainingTime = training.item.time;
-  const [barTicks, setBarTicks] = useState(0);
+  const intervalTime = training.item.time / 100;
+  const [barTicks, setBarTicks] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (barTicks === 100) {
-        setBarTicks(0);
+        setBarTicks(1);
       } else {
         setBarTicks(barTicks + 1);
       }
-    }, trainingTime/100)
+    }, intervalTime)
 
     return () => clearInterval(interval);
   })
