@@ -1,13 +1,6 @@
-import { useDispatch } from "react-redux"
-import { setTraining } from "../../../../state_management/Redux/Character/CharacterSlice";
 import FishHeader from "./FishHeader";
 
 export default function Fishing() {
-  const dispatch = useDispatch();
-
-  function setFishingTraining(fish) {
-    dispatch(setTraining({skill_tree: "fishing", item: fish}));
-  }
 
   return (
     <div className="w-full h-full">
