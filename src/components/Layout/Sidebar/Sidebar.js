@@ -2,6 +2,9 @@ import SidebarItem from "./SidebarItem";
 import SwordSprite from "../../../images/sprites/sword.png";
 import RedPotionSprite from "../../../images/sprites/red-potion.png";
 import Logo from "../Logo";
+import GatheringSprite from "../../../images/sprites/marjoram_flower.png";
+import MiningSprite from "../../../images/sprites/steel_ore.png";
+import FishingSprite from "../../../images/sprites/fish.png";
 
 export default function Sidebar() {
 
@@ -12,9 +15,9 @@ export default function Sidebar() {
         <SidebarItem name="Combat" image={SwordSprite} link="/combat" skill={false} character={false}/>
       </div>
       <div>
-        <SidebarItem name="Gathering" image={RedPotionSprite} link="/gathering" skill={true} character={false}/>
-        <SidebarItem name="Fishing" image={RedPotionSprite} link="/fishing" skill={true} character={false}/>
-        <SidebarItem name="Mining" image={RedPotionSprite} link="/mining" skill={true} character={false}/>
+        <SidebarItem name="Gathering" image={GatheringSprite} link="/gathering" skill={true} character={false}/>
+        <SidebarItem name="Fishing" image={FishingSprite} link="/fishing" skill={true} character={false}/>
+        <SidebarItem name="Mining" image={MiningSprite} link="/mining" skill={true} character={false}/>
         <SidebarItem name="Farming" image={RedPotionSprite} link="/farming" skill={true} character={false}/>
         <SidebarItem name="Thieving" image={RedPotionSprite} link="/thieving" skill={true} character={false}/>
       </div>
