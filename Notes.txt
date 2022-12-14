@@ -19,6 +19,7 @@ Checklist:
 Sources for reseach:
   - MapleRoyals
   - https://bbb.hidden-street.net/
+  - Fishing Guide (Potential Fish Use Ideas): https://www.reddit.com/r/Maplestory/comments/e87c5t/so_you_want_to_fish_in_maplestory_a_somewhat/
 
 Future To Dos:
   - Monster attack interval - a function using their speed stat
@@ -44,4 +45,5 @@ Notes to Self:
     - 2: usables
     - 3: etc
   Skill Denotations:
-    - 1: Herb Collection
+    - 1: Gathering
+    - 2: Fishing

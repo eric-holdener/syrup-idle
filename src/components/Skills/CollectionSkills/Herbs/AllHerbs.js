@@ -1,3 +1,5 @@
+// id range: 1 - 24
+
 const marjoram_seed = {
   id: 1,
   name: "Marjoram Seed",
