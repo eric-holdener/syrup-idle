@@ -144,3 +144,7 @@ const deep_sea = {
   req_lvl: 1,
   items: [mystery_fish, eel, cutlassfish]
 }
+
+const All_Fish = [pond, river, ocean, deep_sea];
+
+export { All_Fish };

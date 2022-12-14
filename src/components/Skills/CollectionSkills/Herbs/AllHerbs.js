@@ -326,4 +326,4 @@ const All_Herbs = [marjoram_plant, clary_sage_plant, lavender_plant,
                   chamomile_plant, patchouli_plant, juniper_berry_plant,
                   hyssop_plant];
 
-export { All_Herbs }
+export { All_Herbs };
