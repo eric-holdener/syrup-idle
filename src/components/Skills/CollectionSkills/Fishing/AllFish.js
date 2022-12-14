@@ -81,7 +81,7 @@ const eel = {
   skill: 2
 };
 
-const Halibut = {
+const halibut = {
   id: 34,
   name: "Sailfish",
   time: 3000,
@@ -116,3 +116,31 @@ const rare_fish = {
   type: 3,
   skill: 2
 };
+
+const pond = {
+  name: "Pond",
+  skill: 2,
+  req_lvl: 1,
+  items: [common_carp, crucian_carp, whitebait]
+}
+
+const river = {
+  name: "River",
+  skill: 2,
+  req_lvl: 1,
+  items: [halibut, sailfish, salmon]
+}
+
+const ocean = {
+  name: "Ocean",
+  skill: 2,
+  req_lvl: 1,
+  items: [bass, rare_fish, mackeral, tuna]
+}
+
+const deep_sea = {
+  name: "Deep Sea",
+  skill: 2,
+  req_lvl: 1,
+  items: [mystery_fish, eel, cutlassfish]
+}
