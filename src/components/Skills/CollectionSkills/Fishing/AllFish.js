@@ -83,7 +83,7 @@ const eel = {
 
 const halibut = {
   id: 34,
-  name: "Sailfish",
+  name: "Halibut",
   time: 3000,
   drop_range: [2, 3, 4],
   type: 3,
