@@ -18,7 +18,7 @@ export default function Mining() {
   }
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full overflow-scroll">
       <MiningHeader />
       <div className="flex gap-10 w-full h-5/6 flex-wrap justify-center">
         {All_Ores.map((vein) => <MiningBox vein={vein} setMiningTraining={setMiningTraining} key={vein.name}/>)}
