@@ -47,3 +47,4 @@ Notes to Self:
   Skill Denotations:
     - 1: Gathering
     - 2: Fishing
+    - 3: Mining
