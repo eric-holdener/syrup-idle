@@ -189,7 +189,7 @@ const magenta_vein = {
   req_lvl: 1,
   items: [orihalcon_ore, amethyst_ore]
 };
-const Blue_vein = {
+const blue_vein = {
   name: "Blue Vein",
   skill: 3,
   req_lvl: 1,
@@ -238,3 +238,8 @@ const purple_vein = {
   items: [wisdom_crystal_ore, luk_crystal_ore, lidium_ore]
 };
 
+const All_Ores = [silver_vein, magenta_vein, blue_vein, brown_vein,
+                  emerald_vein, gold_vein, aquamarine_vein, red_vein,
+                  black_vein, purple_vein];
+              
+export { All_Ores };
