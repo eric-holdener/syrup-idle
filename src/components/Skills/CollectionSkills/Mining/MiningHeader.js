@@ -8,7 +8,7 @@ export default function MiningHeader() {
   // const training = character.currently_training;
 
   return (
-    <div className="w-full h-1/6 bg-slate-800 opacity-75 mb-3">
+    <div className="w-full h-1/6 bg-slate-800 mb-3">
       {/* {training ? (
         <TimerBar />
       ) : (
