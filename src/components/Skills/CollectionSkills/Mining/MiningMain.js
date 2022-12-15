@@ -1,5 +1,6 @@
 import MiningHeader from "./MiningHeader";
 import MiningBox from "./MiningBox";
+import { All_Ores } from "./AllOres";
 import { useDispatch } from "react-redux";
 import { setTraining } from "../../../../state_management/Redux/Character/CharacterSlice";
 
@@ -20,7 +21,7 @@ export default function Mining() {
     <div className="w-full h-full">
       <MiningHeader />
       <div className="flex gap-10 w-full h-5/6 flex-wrap justify-center">
-        {/* {All_Fish.map((fish) => <MiningBox fish={fish} setFishingTraining={setFishingTraining} key={fish.name}/>)} */}
+        {All_Ores.map((vein) => <MiningBox vein={vein} setMiningTraining={setMiningTraining} key={vein.name}/>)}
       </div>
     </div>
   )
