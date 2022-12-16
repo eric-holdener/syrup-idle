@@ -1,4 +1,4 @@
-// id range: 38 - 
+// id range: 38 - 59
 
 const silver_ore = {
   id: 38,

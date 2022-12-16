@@ -48,3 +48,4 @@ Notes to Self:
     - 1: Gathering
     - 2: Fishing
     - 3: Mining
+    - 4: Smithing
