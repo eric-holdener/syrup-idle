@@ -1,5 +1,11 @@
+import SmithingBox from "./SmithingBox";
+import SmithingHeader from "./SmithingHeader";
+
 export default function Smithing() {
   return (
-    <p>Smithing</p>
+    <div>
+      <SmithingHeader/>
+      <SmithingBox />
+    </div>
   )
 }
