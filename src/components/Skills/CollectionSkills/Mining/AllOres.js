@@ -178,6 +178,7 @@ const lidium_ore = {
 
 const silver_vein = {
   name: "Silver Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [silver_ore, opal_ore]
@@ -185,54 +186,63 @@ const silver_vein = {
 
 const magenta_vein = {
   name: "Magenta Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [orihalcon_ore, amethyst_ore]
 };
 const blue_vein = {
   name: "Blue Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [steel_ore, sapphire_ore]
 };
 const brown_vein = {
   name: "Brown Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [bronze_ore, adamantium_ore]
 };
 const emerald_vein = {
   name: "Emerald Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [dex_crystal_ore, mithril_ore, emerald_ore]
 };
 const gold_vein = {
   name: "Gold Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [gold_ore, topaz_ore]
 };
 const aquamarine_vein = {
   name: "Aquamarine Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [aquamarine_ore, diamond_ore]
 };
 const red_vein = {
   name: "Red Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [power_crystal_ore, garnet_ore]
 };
 const black_vein = {
   name: "Black Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [dark_crystal_ore, black_crystal_ore]
 };
 const purple_vein = {
   name: "Purple Vein",
+  time: 2000,
   skill: 3,
   req_lvl: 1,
   items: [wisdom_crystal_ore, luk_crystal_ore, lidium_ore]
