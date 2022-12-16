@@ -10,10 +10,7 @@ export default function Mining() {
   function setMiningTraining(ore) {
     dispatch(setTraining({
       skill_tree: "mining",
-      // item: {
-      //   time: fish.time,
-      //   items: [fish]
-      // }
+      item: ore
     }))
   }
 

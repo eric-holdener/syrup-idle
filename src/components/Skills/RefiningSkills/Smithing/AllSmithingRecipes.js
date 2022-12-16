@@ -10,4 +10,4 @@ const gold_bar = {
 
 const All_Smithing_Recipes = [gold_bar];
 
-export { gold_bar };
+export { All_Smithing_Recipes };
