@@ -39,6 +39,7 @@ export default function TickSystem() {
         // item reqs are structured as payloads already
         // checks for quantity are controlled on the item box level, but extra checks are added as well for safety
         for (const payload of item.items_req) {
+          // determines inventory to look in for required items
           let inventoryType = null;
           console.log(payload);
           if (payload.type === 1) {
@@ -56,18 +57,25 @@ export default function TickSystem() {
             const id = payload.id
             const leftover = character.inventoryType.id.item.quantity - payload.quantity;
             if (leftover < payload.quantity && leftover >= 0) {
-              stop = true;
+              // if items leftover in inventory is less than how much it would take to make another, we stop at the end of this tick
+              // still add to the deletion payload though, because one more can be made
+              stop = true;  
+              subtractPayload.push(payload);
             } else if (leftover < 0) {
-              // breaks out of 
+              // breaks out of loop if another item cant be made with how much is left
+              // should not reach here if boxes are controlled properly, but it's a safety check
               negativeLeftover = true;
               break
             } else {
+              // else, just add to the deletion payload
               subtractPayload.push(payload);
             };
           }
         };
 
+        // as long as adding another item won't cause a negative overflow
         if (!negativeLeftover) {
+          // create payload for adding new item to inventory
           const payload = {
             type: item.type,
             item: {
@@ -77,11 +85,12 @@ export default function TickSystem() {
             }
           };
 
+          // add and subtract from inventory
           // dispatch(addItem(payload));
-
           // dispatch(deleteItems(subtractPayload))
         }
 
+        // at the end of it all, stop training if no more items can be made
         if (stop) {
           StopTraining();
         };
