@@ -5,7 +5,7 @@ const gold_bar = {
   name: "Gold Bar",
   type: 3,
   skill: 4,
-  items_req: [{id: 49, quantity: 1}],
+  items_req: [{id: 49, quantity: 1, type: 3}],
   time: 2000
 }
 

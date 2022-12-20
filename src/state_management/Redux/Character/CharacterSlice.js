@@ -88,7 +88,41 @@ const characterSlice = createSlice({
           }
         }
       }
-    }
+    },
+    deleteItem: (state, { payload }) => {
+      console.log(payload);
+      // item types:
+      // 1 - equipment
+      // 2 - usables
+      // 3 - etc (crafting items)
+      let inventoryType = null;
+      const id = payload.id;
+
+      if (payload.type === 1) {
+        inventoryType = "equipInventory";
+      } else if (payload.type === 2) {
+        inventoryType = "useInventory";
+      } else if (payload.type === 3) {
+        inventoryType = "etcInventory";
+      } else {
+        console.log("Invalid inventory type detected");
+        return
+      };
+
+      if (inventoryType != null) {
+        const quantity = state[inventoryType][id].item.quantity - payload.quantity
+        if (quantity === 0) {
+          return {
+            ...state,
+            [inventoryType]: {
+              
+            }
+          }
+        } else {
+          state[inventoryType][id].item = { ...state[inventoryType][id].item, quantity: quantity}
+        }
+      }
+    },
   }
 })
 
