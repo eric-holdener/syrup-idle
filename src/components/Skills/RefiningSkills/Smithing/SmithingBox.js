@@ -8,9 +8,9 @@ export default function SmithingBox(props) {
 
   useEffect(() => {
     for (const item of props.recipe.items_req) {
-      if (!(item in character.etcInventory)) {
-        if (!(item in character.useInventory)) {
-          if (!(item in character.equipInventory)) {
+      if (!(item.id in character.etcInventory)) {
+        if (!(item.id in character.useInventory)) {
+          if (!(item.id in character.equipInventory)) {
             setValidCraft(false);
           }
         }
