@@ -27,7 +27,7 @@ export default function TickSystem() {
           }
         }
       } else if (training.skill_tree === "smithing") {
-        console.log("there");
+        console.log(training);
       }
  
     }, training.item.time);
