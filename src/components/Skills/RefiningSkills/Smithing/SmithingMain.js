@@ -14,9 +14,11 @@ export default function Smithing() {
     }))
   }
   return (
-    <div>
+    <div className="w-full h-full overflow-scroll">
       <SmithingHeader/>
-      {All_Smithing_Recipes.map((recipe) => <SmithingBox recipe={recipe} setSmithingTraining={setSmithingTraining} key={recipe.name}/>)}
+      <div className="flex gap-10 w-full h-5/6 flex-wrap justify-center">
+        {All_Smithing_Recipes.map((recipe) => <SmithingBox recipe={recipe} setSmithingTraining={setSmithingTraining} key={recipe.name}/>)}
+      </div>
     </div>
   )
 }

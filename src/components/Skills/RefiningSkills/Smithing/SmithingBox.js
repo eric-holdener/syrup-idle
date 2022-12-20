@@ -25,7 +25,7 @@ export default function SmithingBox(props) {
         {validCraft ? (
             <button onClick={() => props.setSmithingTraining(props.recipe)} className="bg-cyan-700 text-white p-1 w-5/6 hover:bg-green-700">Smith</button>
         ) : (
-          <button type="button" class="p-1 w-5/6 text-white bg-cyan-700 rounded focus:outline-none" disabled>Smith</button>
+          <button className="p-1 w-5/6 text-white bg-cyan-700 rounded focus:outline-none" disabled>No Materials</button>
         )}
       </div>
       
