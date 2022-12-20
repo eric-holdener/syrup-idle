@@ -5,7 +5,7 @@ const gold_bar = {
   name: "Gold Bar",
   type: 3,
   skill: 4,
-  items_req: [49]
+  items_req: [{id: 49, quantity: 1}]
 }
 
 const All_Smithing_Recipes = [gold_bar];
