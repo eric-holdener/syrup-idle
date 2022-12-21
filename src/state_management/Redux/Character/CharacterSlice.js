@@ -113,9 +113,9 @@ const characterSlice = createSlice({
         const quantity = state[inventoryType][id].item.quantity - payload.quantity
         if (quantity === 0) {
           return {
-            ...state,
+            ...state, 
             [inventoryType]: {
-              
+              ...state[inventoryType]
             }
           }
         } else {
@@ -126,7 +126,7 @@ const characterSlice = createSlice({
   }
 })
 
-export const { takeDamage, healCharacter, addExp, increaseStat, addEquip, setCharacter, clear, setTraining, addItem } = characterSlice.actions;
+export const { takeDamage, healCharacter, addExp, increaseStat, addEquip, setCharacter, clear, setTraining, addItem, deleteItem } = characterSlice.actions;
 const characterReducer = characterSlice.reducer;
 
 export default characterReducer;

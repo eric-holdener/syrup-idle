@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../state_management/Redux/Character/CharacterSlice";
+import { addItem, deleteItem } from "../state_management/Redux/Character/CharacterSlice";
 import StopTraining from "./StopTrainingButton";
 
 export default function TickSystem() {
@@ -34,7 +34,6 @@ export default function TickSystem() {
         let item = training.item;
         let stop = false;
         let negativeLeftover = false;
-        let subtractPayload = [];
         // gets rid of requirements
         // item reqs are structured as payloads already
         // checks for quantity are controlled on the item box level, but extra checks are added as well for safety
@@ -54,21 +53,20 @@ export default function TickSystem() {
           };
 
           if (inventoryType != null) {
-            const id = payload.id
             const leftover = character.inventoryType.id.item.quantity - payload.quantity;
             if (leftover < payload.quantity && leftover >= 0) {
               // if items leftover in inventory is less than how much it would take to make another, we stop at the end of this tick
-              // still add to the deletion payload though, because one more can be made
+              // still dispatch though, because one more can be made
               stop = true;  
-              subtractPayload.push(payload);
+              // dispatch(deleteItem(payload));
             } else if (leftover < 0) {
               // breaks out of loop if another item cant be made with how much is left
               // should not reach here if boxes are controlled properly, but it's a safety check
               negativeLeftover = true;
               break
             } else {
-              // else, just add to the deletion payload
-              subtractPayload.push(payload);
+              // else, just dispatch to delete to the deletion payload
+              // dispatch(deleteItem(payload));
             };
           }
         };
@@ -85,15 +83,14 @@ export default function TickSystem() {
             }
           };
 
-          // add and subtract from inventory
+          // add to inventory
           // dispatch(addItem(payload));
-          // dispatch(deleteItems(subtractPayload))
         }
 
         // at the end of it all, stop training if no more items can be made
-        if (stop) {
-          StopTraining();
-        };
+        // if (stop) {
+        //   StopTraining();
+        // };
 
       }
  
