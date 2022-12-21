@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { omit } from "lodash";
 
 const characterSlice = createSlice({
   name: "character",
@@ -112,11 +113,11 @@ const characterSlice = createSlice({
       if (inventoryType != null) {
         const quantity = state[inventoryType][id].item.quantity - payload.quantity
         if (quantity === 0) {
+          let next = { ...state[inventoryType] };
+          delete next[payload.id];
           return {
-            ...state, 
-            [inventoryType]: {
-              ...state[inventoryType]
-            }
+            ...state,
+            [inventoryType]: next
           }
         } else {
           state[inventoryType][id].item = { ...state[inventoryType][id].item, quantity: quantity}
