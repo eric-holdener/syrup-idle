@@ -170,7 +170,7 @@ const luk_crystal_ore = {
 
 const lidium_ore = {
   id: 59,
-  name: "Silver Ore",
+  name: "Lidium Ore",
   drop_range: [2, 3, 4],
   type: 3,
   skill: 3
