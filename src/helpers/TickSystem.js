@@ -58,7 +58,7 @@ export default function TickSystem() {
               // if items leftover in inventory is less than how much it would take to make another, we stop at the end of this tick
               // still dispatch though, because one more can be made
               stop = true;  
-              // dispatch(deleteItem(payload));
+              dispatch(deleteItem(payload));
             } else if (leftover < 0) {
               // breaks out of loop if another item cant be made with how much is left
               // should not reach here if boxes are controlled properly, but it's a safety check
@@ -66,7 +66,7 @@ export default function TickSystem() {
               break
             } else {
               // else, just dispatch to delete to the deletion payload
-              // dispatch(deleteItem(payload));
+              dispatch(deleteItem(payload));
             };
           }
         };
@@ -84,13 +84,13 @@ export default function TickSystem() {
           };
 
           // add to inventory
-          // dispatch(addItem(payload));
+          dispatch(addItem(payload));
         }
 
         // at the end of it all, stop training if no more items can be made
-        // if (stop) {
-        //   StopTraining();
-        // };
+        if (stop) {
+          StopTraining();
+        };
 
       }
  
