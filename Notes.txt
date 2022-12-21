@@ -1,10 +1,6 @@
 Checklist:
-  - Create herbs for herb collection
-  - Brainstorm / concept herb collection
   - Create potions to craft
   - Concept potion crafting / implement
-  - Create ores to mine
-  - Concept mining / implement
   - Statistics and calculations for damage
   - Develop combat
   - Creating each monster available
@@ -38,6 +34,10 @@ Done:
   - Create two maps with monsters √
   - Random monster selection in locations √
   - Tick system √
+  - Create herbs for herb collection √
+  - Brainstorm / concept herb collection √
+  - Create ores to mine √
+  - Concept mining / implement √
 
 Notes to Self:
   Item types:
@@ -49,3 +49,4 @@ Notes to Self:
     - 2: Fishing
     - 3: Mining
     - 4: Smithing
+    - 5: Alchemy

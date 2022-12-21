@@ -1,4 +1,4 @@
-// id range 60 - 
+// id range 60 - 81
 
 const gold = {
   id: 60,
