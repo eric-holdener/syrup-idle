@@ -11,7 +11,8 @@ const all_cure_potion = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - clears abnormal statuses
 }
 
@@ -21,7 +22,8 @@ const antidote = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - clears poison statuses
 }
 
@@ -31,7 +33,8 @@ const angelic_steps = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - speed +5 for x ticks (10 min in maple)
 }
 
@@ -41,7 +44,8 @@ const archer_elixer = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - avoidability +20
 }
 
@@ -51,7 +55,8 @@ const blastrojuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - weapon att +90 for x ticks (1 min in maple)
 }
 
@@ -61,7 +66,8 @@ const body_physics_medicine = {
     type: 2,
     skill: 5,
     potion_type: 3,
-    items_req: []
+    items_req: [],
+    level_req: 1,
     // effect? - att +8 for x ticks (15 min in maple)
 }
 
@@ -71,7 +77,8 @@ const dexterity_pill = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - avoidability +10 for x ticks (10 min in maple)
 }
 
@@ -81,7 +88,8 @@ const dexterity_potion = {
     type: 2,
     skill: 5,
     potion_type: 3,
-    items_req: []
+    items_req: [],
+    level_req: 1,
     // effect? - avoidability +5 for x ticks (3 min in maple)
 }
 
@@ -91,7 +99,8 @@ const electrojuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +50 for x ticks (10 min in maple)
 }
 
@@ -101,7 +110,8 @@ const eyedrop = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - cures dark status
 }
 
@@ -111,7 +121,8 @@ const gigajuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +700 for x ticks (10 sec in maple)
 }
 
@@ -121,7 +132,8 @@ const holy_water = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - clears cursed, sealed
 }
 
@@ -131,7 +143,8 @@ const jigajuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +1000 for x ticks (5 sec in maple)
 }
 
@@ -141,7 +154,8 @@ const magic_pill = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +5 for x ticks (10 min in maple)
 }
 
@@ -151,7 +165,8 @@ const magic_potion = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +5 for x ticks (3 min in maple)
 }
 
@@ -161,7 +176,8 @@ const megajuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - magic att +200 for x ticks (30 sec in maple)
 }
 
@@ -171,7 +187,8 @@ const mind_heart_medicine = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - accuracy +10 for x ticks (15 min in maple)
 }
 
@@ -181,7 +198,8 @@ const nitrojuice = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - weapon att +22 for x ticks (10 min in maple)
 }
 
@@ -191,6 +209,7 @@ const pain_reliever = {
   type: 2,
   skill: 5,
   potion_type: 3,
-  items_req: []
+  items_req: [],
+  level_req: 1,
   // effect? - weapon def +30 for x ticks (30 min in maple)
 }
