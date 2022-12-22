@@ -93,4 +93,40 @@ const honster = {
   healing_type: 1
 }
 
+const mana_bull = {
+  id: 89,
+  name: "Mana Bull",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 60,
+  cost: 600,
+  level_req: 1,
+  healing_type: 2
+}
+
+const mana_elixir = {
+  id: 90,
+  name: "Mana Elixir",
+  type: 2,
+  skill: null,
+  potion_type: 1,
+  heal_amount: 300,
+  cost: 310,
+  level_req: 1,
+  healing_type: 2
+}
+
+const orange_potion = {
+  id: 91,
+  name: "Orange Potion",
+  type: 2,
+  skill: null,
+  potion_type: 1,
+  heal_amount: 150,
+  cost: 80,
+  level_req: 1,
+  healing_type: 1
+}
+
 const All_Buyable_Potion = [red_potion]

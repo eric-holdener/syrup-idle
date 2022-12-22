@@ -134,3 +134,63 @@ const jigajuice = {
   items_req: []
   // effect? - magic att +1000 for x ticks (5 sec in maple)
 }
+
+const magic_pill = {
+  // id: xx,
+  name: "Magic Pill",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +5 for x ticks (10 min in maple)
+}
+
+const magic_potion = {
+  // id: xx,
+  name: "Magic Potion",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +5 for x ticks (3 min in maple)
+}
+
+const megajuice = {
+  // id: xx,
+  name: "MegaJuice",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +200 for x ticks (30 sec in maple)
+}
+
+const mind_heart_medicine = {
+  // id: xx,
+  name: "Mind and Heart Medicine",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - accuracy +10 for x ticks (15 min in maple)
+}
+
+const nitrojuice = {
+  // id: xx,
+  name: "NitroJuice",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - weapon att +22 for x ticks (10 min in maple)
+}
+
+const pain_reliever = {
+  // id: xx,
+  name: "Pain Reliever",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - weapon def +30 for x ticks (30 min in maple)
+}
