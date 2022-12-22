@@ -74,3 +74,63 @@ const dexterity_pill = {
   items_req: []
   // effect? - avoidability +10 for x ticks (10 min in maple)
 }
+
+const dexterity_potion = {
+    // id: xx,
+    name: "Dexterity Potion",
+    type: 2,
+    skill: 5,
+    potion_type: 3,
+    items_req: []
+    // effect? - avoidability +5 for x ticks (3 min in maple)
+}
+
+const electrojuice = {
+  // id: xx,
+  name: "Electrojuice",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +50 for x ticks (10 min in maple)
+}
+
+const eyedrop = {
+  // id: xx,
+  name: "Eyedrop",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - cures dark status
+}
+
+const gigajuice = {
+  // id: xx,
+  name: "Gigajuice",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +700 for x ticks (10 sec in maple)
+}
+
+const holy_water = {
+  // id: xx,
+  name: "Holy Water",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - clears cursed, sealed
+}
+
+const jigajuice = {
+  // id: xx,
+  name: "Jigajuice",
+  type: 2,
+  skill: 5,
+  potion_type: 3,
+  items_req: []
+  // effect? - magic att +1000 for x ticks (5 sec in maple)
+}

@@ -7,6 +7,7 @@
 // healing types:
 // 1 - hp
 // 2 - mp
+// 3 - hp and mp
 
 const red_potion = {
   id: 82,
@@ -44,6 +45,52 @@ const blue_potion = {
   healing_type: 2
 }
 
+const elixir = {
+  id: 85,
+  name: "Elixir",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 50,
+  cost: 1000,
+  level_req: 1,
+  healing_type: 3
+}
 
+const ginger_ale = {
+  id: 86,
+  name: "Ginger Ale",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 75,
+  cost: 1100,
+  level_req: 1,
+  healing_type: 3
+}
+
+const ginseng_root = {
+  id: 87,
+  name: "Ginseng Root",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 40,
+  cost: 750,
+  level_req: 1,
+  healing_type: 3
+}
+
+const honster = {
+  id: 88,
+  name: "Honster",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 60,
+  cost: 600,
+  level_req: 1,
+  healing_type: 1
+}
 
 const All_Buyable_Potion = [red_potion]
