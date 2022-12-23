@@ -368,3 +368,15 @@ const wizard_potion = {
   level_req: 1,
   // effect? - magic att +10 for x ticks (3 min in maple)
 };
+
+const All_Craftable_Potions = [all_cure_potion, antidote, angelic_steps, archer_elixer,
+                                blastrojuice, body_physics_medicine, dexterity_pill,
+                                dexterity_potion, electrojuice, eyedrop, gigajuice,
+                                holy_water, jigajuice, magic_pill, magic_potion,
+                                megajuice, mind_heart_medicine, nitrojuice,
+                                pain_reliever, pill_of_intelligence, pill_of_tunnel_vision,
+                                sniper_pill, sniper_potion, speed_pill, speed_potion,
+                                thief_elixir, tonic, vitrojuice,warrior_elixir, warrior_pill,
+                                warrior_potion, wizard_elixir, wizard_potion];
+
+export { All_Craftable_Potions };
