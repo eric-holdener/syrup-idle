@@ -19,11 +19,15 @@ Sources for reseach:
 
 Future To Dos:
   - Monster attack interval - a function using their speed stat
+  - Add pets for each skill / droppable pets in dungeons and bosses
+  - Pets can auto cast 1 buff or auto eat 1 potion whenever necessary
+  - Players can use all pets at once - more pets you have the less micro you need
   - Add drops
   - Change placeholder names
   - Add in questing system
   - Pare down locations to remove unnecessary bloat
   - Refactor new item in inventory system to dynamically pick the correct inventory that an item will be stored in
+  - Balance economy
 
 Down the line features:
   - Multiple starting classes (cygnus)

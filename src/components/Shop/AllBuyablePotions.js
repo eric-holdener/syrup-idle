@@ -1,4 +1,5 @@
 // id range 82 - 
+// https://bbb.hidden-street.net/items/useable-items/potion
 // buyable potions are healing aspects (mostly)
 // potion types:
 // 1 - flat amount healing
@@ -16,10 +17,10 @@ const red_potion = {
   skill: null,
   potion_type: 1,
   heal_amount: 50,
-  cost: 100,
+  cost: 25,
   level_req: 1,
   healing_type: 1
-}
+};
 
 const barbarian_elixir = {
   id: 83,
@@ -31,7 +32,7 @@ const barbarian_elixir = {
   cost: 500,
   level_req: 1,
   healing_type: 1
-}
+};
 
 const blue_potion = {
   id: 84,
@@ -43,7 +44,7 @@ const blue_potion = {
   cost: 100,
   level_req: 1,
   healing_type: 2
-}
+};
 
 const elixir = {
   id: 85,
@@ -55,7 +56,7 @@ const elixir = {
   cost: 1000,
   level_req: 1,
   healing_type: 3
-}
+};
 
 const ginger_ale = {
   id: 86,
@@ -67,7 +68,7 @@ const ginger_ale = {
   cost: 1100,
   level_req: 1,
   healing_type: 3
-}
+};
 
 const ginseng_root = {
   id: 87,
@@ -79,7 +80,7 @@ const ginseng_root = {
   cost: 750,
   level_req: 1,
   healing_type: 3
-}
+};
 
 const honster = {
   id: 88,
@@ -91,7 +92,7 @@ const honster = {
   cost: 600,
   level_req: 1,
   healing_type: 1
-}
+};
 
 const mana_bull = {
   id: 89,
@@ -103,7 +104,7 @@ const mana_bull = {
   cost: 600,
   level_req: 1,
   healing_type: 2
-}
+};
 
 const mana_elixir = {
   id: 90,
@@ -115,7 +116,7 @@ const mana_elixir = {
   cost: 310,
   level_req: 1,
   healing_type: 2
-}
+};
 
 const orange_potion = {
   id: 91,
@@ -127,6 +128,42 @@ const orange_potion = {
   cost: 80,
   level_req: 1,
   healing_type: 1
-}
+};
+
+const power_elixir = {
+  id: 92,
+  name: "Power Elixir",
+  type: 2,
+  skill: null,
+  potion_type: 2,
+  heal_amount: 100,
+  cost: 2500,
+  level_req: 1,
+  healing_type: 3
+};
+
+const sorcerer_elixir = {
+  id: 93,
+  name: "Sorcerer Elixir",
+  type: 2,
+  skill: null,
+  potion_type: 1,
+  heal_amount: 1500,
+  cost: 2500,
+  level_req: 1,
+  healing_type: 2
+};
+
+const white_potion = {
+  id: 95,
+  name: "White Potion",
+  type: 2,
+  skill: null,
+  potion_type: 1,
+  heal_amount: 300,
+  cost: 2500,
+  level_req: 1,
+  healing_type: 1
+};
 
 const All_Buyable_Potion = [red_potion]
