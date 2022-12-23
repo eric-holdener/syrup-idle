@@ -166,4 +166,8 @@ const white_potion = {
   healing_type: 1
 };
 
-const All_Buyable_Potion = [red_potion]
+const All_Buyable_Potions = [red_potion, barbarian_elixir, blue_potion, elixir, ginger_ale,
+                            ginseng_root, honster, mana_bull, mana_elixir, orange_potion,
+                            power_elixir, sorcerer_elixir, white_potion];
+
+export { All_Buyable_Potions };
